@@ -9,6 +9,7 @@ import { LoginPage } from '../pages/Login';
 import { LoginAdmPage } from '../pages/LoginAdm';
 import { RecoverPasswordPage } from '../pages/RecoverPassword';
 import { Profile } from '../pages/Perfil';
+import { Visitant } from '../pages/Visitant';
 
 const AppRoutes = () => {
 	return (
@@ -19,7 +20,7 @@ const AppRoutes = () => {
 					<Route path='loginAdm' element={<LoginAdmPage />} />
 					<Route path='RecoverPasswordPage' element={<RecoverPasswordPage />} />
 					<Route path='home' element={<Home />} />
-					<Route path='project11' element={<Project />} />
+					<Route path='visitant' element={<Visitant />} />
 					<Route path='profile' element={<Profile />} />
 				</Route>
 			</Routes>

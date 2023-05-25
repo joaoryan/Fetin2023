@@ -33,7 +33,7 @@ export function Home(): JSX.Element {
               </Styled.Title>
             </Styled.CardButton>
           </Styled.CardButtonDiv>
-          <Styled.CardButtonDiv onClick={() => navigate(`/login`)}>
+          <Styled.CardButtonDiv onClick={() => navigate(`/visitant`)}>
             <Styled.CardButton>
               <RiContactsFill />
               <Styled.Title>
