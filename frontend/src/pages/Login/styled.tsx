@@ -26,12 +26,12 @@ export const divButton = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 24px;
+  font-size: 22px;
   margin: 0px 0px 16px 20px;
 `;
 
 export const Text1 = styled.div`
-  font-size: 16px;
+  font-size: 13px;
   cursor: pointer;
   &:hover {
     color: ${props => props.theme.colors.hoverColor}
@@ -57,16 +57,23 @@ export const Form = styled.form`
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
+  font-size: 14px;
   margin-bottom: 8px;
   width: 300px;
   gap:5px;
+  transition: 0.5s;
+  &:hover {
+    transition: 0.5s;
+    color: #F231A5
+  }
 `;
 
 export const Input = styled.input`
   padding: 8px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 4px;
   font-size: 16px;
+  background-color: ${props => props.theme.colors.textPrimary};
 `;
 
 export const Button = styled.button`
@@ -78,7 +85,7 @@ export const Button = styled.button`
   font-size: 16px;
   cursor: pointer;
   margin-top: 16px;
-  width: 148px;
+  width: 178px;
   &:hover {
     background-color: ${props => props.theme.colors.hoverColor}
   }

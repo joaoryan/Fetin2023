@@ -2,9 +2,12 @@ import { useForm } from 'react-hook-form';
 import * as Styled from './styled';
 import { useNavigate } from 'react-router';
 import RotateBanner from '../../components/RotateBanner';
+import image from '../../assets/image/cat2.jpg';
+import { FaImages } from 'react-icons/fa';
 
 type FormValues = {
   email: string;
+  phone: number;
   password: string;
   codeAdm: string;
 };
@@ -20,8 +23,11 @@ export function LoginAdmPage(): JSX.Element {
   return (
     <Styled.Container>
       <Styled.DivInputs>
-        <Styled.Title>Login</Styled.Title>
+        <Styled.Title>Crie sua conta</Styled.Title>
         <Styled.Form onSubmit={handleSubmit(onSubmit)}>
+          <Styled.Image>
+            <FaImages />
+          </Styled.Image>
           <Styled.Label>
             Email:
             <Styled.Input
@@ -44,6 +50,16 @@ export function LoginAdmPage(): JSX.Element {
           </Styled.Label>
 
           <Styled.Label>
+            Telefone:
+            <Styled.Input
+              type="phone"
+              {...register('phone', { required: true })}
+              disabled={formState.isSubmitting}
+            />
+            {formState.errors.email && <Styled.Error>Email é obrigatório</Styled.Error>}
+          </Styled.Label>
+
+          <Styled.Label>
             Codigo administrador:
             <Styled.Input
               type="text"
@@ -53,11 +69,8 @@ export function LoginAdmPage(): JSX.Element {
             />
             {formState.errors.codeAdm && <Styled.Error>Codigo do administrador é obrigatória</Styled.Error>}
           </Styled.Label>
-
-          <Styled.Text1 onClick={() => navigate('/RecoverPasswordPage')}>Esqueceu a senha</Styled.Text1>
-
           <Styled.divButton>
-            <Styled.Button onClick={() => navigate(`/login`)} disabled={formState.isSubmitting}>
+            <Styled.Button onClick={() => navigate(`/`)} disabled={formState.isSubmitting}>
               {formState.isSubmitting ? 'Aguarde...' : 'voltar'}
             </Styled.Button>
             <Styled.Button type="submit" disabled={formState.isSubmitting}>

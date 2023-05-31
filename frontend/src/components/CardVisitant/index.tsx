@@ -8,6 +8,7 @@ interface CardProps {
     name: string,
     timeAnimate: number,
     threshold?: number,
+    modalDelete: () => void;
 }
 
 const CardVisitant = ({
@@ -15,13 +16,14 @@ const CardVisitant = ({
     name,
     timeAnimate,
     threshold = 0.2,
+    modalDelete
 }: CardProps) => {
     const { ref, inView } = useInView({ threshold })
     return (
         <Styled.Card time={timeAnimate}>
             <div ref={ref} className={`transform ${inView ? "show" : ""}`}>
                 <Styled.Icon>
-                    <div>
+                    <div onClick={() => modalDelete()}>
                         Remover
                         <MdDeleteForever />
                     </div>

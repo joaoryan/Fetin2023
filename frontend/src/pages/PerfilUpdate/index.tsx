@@ -12,8 +12,6 @@ import { FaArrowLeft } from 'react-icons/fa'
 import TeamCard from '../../components/Equip';
 import Header from '../../components/Hader';
 import image from '../../assets/image/cat2.jpg';
-import ModalDeleteUser from '../../components/Modals/ModalDeleteUser';
-
 //RiContactsFill
 
 type FormValues = {
@@ -21,24 +19,12 @@ type FormValues = {
   password: string;
 };
 
-export function Profile(): JSX.Element {
+export function ProfileUpdate(): JSX.Element {
   const navigate = useNavigate();
-  const [showModalDeleteUser, setShowModalDeleteUser] = useState(false);
 
   return (
     <>
-
-      {showModalDeleteUser && (
-        <ModalDeleteUser
-          id={1}
-          onCancel={() => setShowModalDeleteUser(false)}
-        />
-      )}
       <Styled.Container>
-        {/*
-       <Styled.backgroundGif>
-       </Styled.backgroundGif>
-       */}
         <Header />
         <Styled.RegressDiv>
           <Styled.Regress onClick={() => navigate(`/home`)}>
@@ -73,7 +59,7 @@ export function Profile(): JSX.Element {
               </div>
             </Styled.Info>
             <Styled.DivButton>
-              <Styled.Button onClick={() => setShowModalDeleteUser(true)}>
+              <Styled.Button type="submit">
                 deletar
               </Styled.Button>
               <Styled.Button type="submit" >

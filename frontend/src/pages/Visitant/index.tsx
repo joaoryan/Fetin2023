@@ -13,9 +13,11 @@ import TeamCard from '../../components/Equip';
 import Header from '../../components/Hader';
 import image from '../../assets/image/cat2.jpg';
 import CardVisitant from '../../components/CardVisitant';
+import ModalDeleteUser from '../../components/Modals/ModalDeleteUser';
 //RiContactsFill
 
 export function Visitant(): JSX.Element {
+  const [showModalDeleteUser, setShowModalDeleteUser] = useState(false);
   const navigate = useNavigate();
   const test = [
     { nome: 'joao ryan', img: '' },
@@ -38,6 +40,13 @@ export function Visitant(): JSX.Element {
 
   return (
     <>
+
+      {showModalDeleteUser && (
+        <ModalDeleteUser
+          id={1}
+          onCancel={() => setShowModalDeleteUser(false)}
+        />
+      )}
       <Styled.Container>
         {/*
        <Styled.backgroundGif>
@@ -53,7 +62,7 @@ export function Visitant(): JSX.Element {
 
         <Styled.BodyDiv>
           {test.map((item, index) =>
-            <CardVisitant img={item.img} name={item.nome} timeAnimate={index / 4} />
+            <CardVisitant img={item.img} name={item.nome} timeAnimate={index / 4} modalDelete={() => setShowModalDeleteUser(true)} />
           )}
 
         </Styled.BodyDiv>

@@ -48,7 +48,7 @@ export function LoginPage(): JSX.Element {
           <Styled.Button type="submit" disabled={formState.isSubmitting}>
             {formState.isSubmitting ? 'Aguarde...' : 'Login'}
           </Styled.Button>
-          <Styled.Text2 onClick={() => navigate(`/loginAdm`)}>Sou administrador</Styled.Text2>
+          <Styled.Text2 onClick={() => navigate(`/loginAdm`)}>Cadrastrar</Styled.Text2>
         </Styled.Form>
       </Styled.DivInputs>
       <Styled.DivImage>

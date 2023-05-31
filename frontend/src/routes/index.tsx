@@ -16,7 +16,7 @@ const AppRoutes = () => {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Layout />}>
-					<Route path='login' element={<LoginPage />} />
+					<Route path='' element={<LoginPage />} />
 					<Route path='loginAdm' element={<LoginAdmPage />} />
 					<Route path='RecoverPasswordPage' element={<RecoverPasswordPage />} />
 					<Route path='home' element={<Home />} />

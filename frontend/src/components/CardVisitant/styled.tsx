@@ -34,8 +34,8 @@ export const Icon = styled.div`
     gap: 20px;
     font-size: 14px;
     padding: 0px 0px 20px 0px;
-    cursor: pointer;
     div{
+        cursor: pointer;
         display: flex;
         align-items: center;
         gap: 2px;

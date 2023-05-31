@@ -31,7 +31,7 @@ export function RecoverPasswordPage(): JSX.Element {
           </Styled.Label>
 
           <Styled.divButton>
-            <Styled.Button onClick={() => navigate(`/login`)} disabled={formState.isSubmitting}>
+            <Styled.Button onClick={() => navigate(`/`)} disabled={formState.isSubmitting}>
               {formState.isSubmitting ? 'Aguarde...' : 'voltar'}
             </Styled.Button>
             <Styled.Button type="submit" disabled={formState.isSubmitting}>

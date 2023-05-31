@@ -6,7 +6,7 @@ interface Props {
 
 export const Card = styled.div<Props>`
     img{
-        max-width: 220px;
+        max-width: 180px;
         border-radius: 10%;
         margin-bottom: 20px;
     }

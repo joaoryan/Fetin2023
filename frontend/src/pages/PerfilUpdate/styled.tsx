@@ -53,7 +53,7 @@ export const InfoDiv = styled.div`
   width: 482px;
   height: 542px;
   background-color: rgb(25, 29, 63);
-  border-radius: 4%;
+  border-radius: 10%;
   gap: 30px;
   padding: 20px 60px;
 `
