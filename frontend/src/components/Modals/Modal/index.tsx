@@ -12,6 +12,7 @@ type ModalProps = {
   headerClass?: string;
   contentClass?: string;
   footerClass?: string;
+  top: string;
   title: string;
   width: string;
   showButtonClose?: boolean;
@@ -19,7 +20,7 @@ type ModalProps = {
 
 const ModalOverlay: FC<ModalProps> = (props) => {
   const content = (
-    <Styled.Container className={props.modalClass} width={props.width}>
+    <Styled.Container className={props.modalClass} width={props.width} top={props.top}>
       <Styled.Header className={props.headerClass}>
         <Styled.Title>{props.title}</Styled.Title>
         {props.showButtonClose ? (

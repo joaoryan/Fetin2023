@@ -3,12 +3,13 @@ import * as DesignSystem from '../../../assets/styles/StyleTypes';
 
 type ContainerProps = {
   width: string;
+  top: string;
 };
 
 export const Container = styled.div<ContainerProps>`
   z-index: 10;
   position: fixed;
-  top: 36vh;
+  top:  ${(props) => props.top};
   left: 40%;
   width: 80%;
   min-width: 260px;
@@ -16,7 +17,7 @@ export const Container = styled.div<ContainerProps>`
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border-radius: 5px;
   color: ${(props) => props.theme.colors.textSecondary};
-  background: ${(props) => props.theme.colors.background};
+  background-color: rgb(25, 29, 63);
   display: flex;
   flex-direction: column;
 
@@ -30,7 +31,8 @@ export const Header = styled.div`
   position: relative;
   flex-basis: 50px;
   min-height: 50px;
-  background: ${(props) => props.theme.colors.backgroundHeaderModal};
+  background-color: rgb(25, 29, 63);
+  //background: ${(props) => props.theme.colors.backgroundHeaderModal};
   color: ${(props) => props.theme.colors.textSecondary};
   display: flex;
   justify-content: center;

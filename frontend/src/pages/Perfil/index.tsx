@@ -5,14 +5,12 @@ import RotateBanner from '../../components/RotateBanner';
 import { useInView } from "react-intersection-observer";
 import { useState } from 'react';
 import AnimateWhenVisible from '../../components/AnimateWhenVisible';
-import { MdGroupAdd } from 'react-icons/md';
-import { MdAccountCircle } from 'react-icons/md'
-import { RiContactsFill } from 'react-icons/ri'
 import { FaArrowLeft } from 'react-icons/fa'
 import TeamCard from '../../components/Equip';
 import Header from '../../components/Hader';
 import image from '../../assets/image/cat2.jpg';
 import ModalDeleteUser from '../../components/Modals/ModalDeleteUser';
+import ModalUpdateUser from '../../components/Modals/ModalUpdateUser';
 
 //RiContactsFill
 
@@ -24,6 +22,7 @@ type FormValues = {
 export function Profile(): JSX.Element {
   const navigate = useNavigate();
   const [showModalDeleteUser, setShowModalDeleteUser] = useState(false);
+  const [showModalUpdateUser, setShowModalUpdateUser] = useState(false);
 
   return (
     <>
@@ -32,6 +31,12 @@ export function Profile(): JSX.Element {
         <ModalDeleteUser
           id={1}
           onCancel={() => setShowModalDeleteUser(false)}
+        />
+      )}
+      {showModalUpdateUser && (
+        <ModalUpdateUser
+          id={1}
+          onCancel={() => setShowModalUpdateUser(false)}
         />
       )}
       <Styled.Container>
@@ -76,7 +81,7 @@ export function Profile(): JSX.Element {
               <Styled.Button onClick={() => setShowModalDeleteUser(true)}>
                 deletar
               </Styled.Button>
-              <Styled.Button type="submit" >
+              <Styled.Button onClick={() => setShowModalUpdateUser(true)} >
                 editar
               </Styled.Button>
             </Styled.DivButton>

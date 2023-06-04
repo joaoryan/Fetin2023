@@ -9,7 +9,7 @@ type ModalProps = {
   onCancel: () => void;
 };
 
-const ModalDeleteUser = (props: ModalProps) => {
+const ModalUpdateUser = (props: ModalProps) => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -41,7 +41,7 @@ const ModalDeleteUser = (props: ModalProps) => {
     <Modal
       title={'EXCLUIR USUÁRIO'}
       width='500px'
-      top='38vh'
+      top='14vh'
       showButtonClose={false}
       children={isLoading ? loading : content}
       footer={footer}
@@ -51,4 +51,4 @@ const ModalDeleteUser = (props: ModalProps) => {
   );
 };
 
-export default ModalDeleteUser;
+export default ModalUpdateUser;

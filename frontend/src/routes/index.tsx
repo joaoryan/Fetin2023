@@ -6,10 +6,11 @@ import { Home } from '../pages/Home';
 import { Page404 } from '../pages/Page404';
 import Layout from '../pages/Layout';
 import { LoginPage } from '../pages/Login';
-import { LoginAdmPage } from '../pages/LoginAdm';
+import { CreateAccount } from '../pages/CreateAccount';
 import { RecoverPasswordPage } from '../pages/RecoverPassword';
 import { Profile } from '../pages/Perfil';
 import { Visitant } from '../pages/Visitant';
+import { CreatVisitant } from '../pages/CreatVisitant';
 
 const AppRoutes = () => {
 	return (
@@ -17,11 +18,12 @@ const AppRoutes = () => {
 			<Routes>
 				<Route path="/" element={<Layout />}>
 					<Route path='' element={<LoginPage />} />
-					<Route path='loginAdm' element={<LoginAdmPage />} />
+					<Route path='createAccount' element={<CreateAccount />} />
 					<Route path='RecoverPasswordPage' element={<RecoverPasswordPage />} />
 					<Route path='home' element={<Home />} />
 					<Route path='visitant' element={<Visitant />} />
 					<Route path='profile' element={<Profile />} />
+					<Route path='user/:id/visitant/creat' element={<CreatVisitant />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

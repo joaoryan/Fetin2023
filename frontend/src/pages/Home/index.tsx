@@ -25,7 +25,7 @@ export function Home(): JSX.Element {
               </Styled.Title>
             </Styled.CardButton>
           </Styled.CardButtonDiv>
-          <Styled.CardButtonDiv onClick={() => navigate(`/login`)}>
+          <Styled.CardButtonDiv onClick={() => navigate(`/user/:id/visitant/creat`)}>
             <Styled.CardButton>
               <MdGroupAdd />
               <Styled.Title>

@@ -12,7 +12,7 @@ type FormValues = {
   codeAdm: string;
 };
 
-export function LoginAdmPage(): JSX.Element {
+export function CreateAccount(): JSX.Element {
   const { register, handleSubmit, formState } = useForm<FormValues>();
   const navigate = useNavigate();
 
