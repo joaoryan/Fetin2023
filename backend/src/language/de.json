@@ -1,0 +1,20 @@
+{
+  "create_user.subject": "Account Aktivierung",
+  "create_user.title": "Hi",
+  "create_user.content1": "Sie wurden eingeladen, auf die IOK-Plattform zuzugreifen, wo Sie Ihre Menüs und Ausrüstung verwalten können.",
+  "create_user.link": "Klicke hier ",
+  "create_user.content2": "um Ihre Registrierung auf der Plattform abzuschließen.", 
+  "create_user.content3": "Dein,",
+  "create_user.content4": "Praxisteam",
+  "create_user.content5": "Wenn Sie Fragen haben, können Sie auf diese E-Mail antworten oder uns von Montag bis Freitag während der Geschäftszeiten unter (35) 3449-1200 kontaktieren.",
+  
+  "reset_user.subject": "Passwort zurücksetzen",
+  "reset_user.title": "Hi",
+  "reset_user.content1": "Sie haben kürzlich ein neues Zugangspasswort für die IOK-Plattform beantragt.",
+  "reset_user.content2": "Wenn Sie eine solche Änderung nicht angefordert haben, ignorieren Sie bitte diese E-Mail.",
+  "reset_user.link": "klicke hier.",
+  "reset_user.content3": "Dein,",
+  "reset_user.content4": "Praxisteam",
+  "reset_user.content5": "Um ein neues Passwort zu erstellen, ",
+  "reset_user.content6" : "Wenn Sie Fragen haben, können Sie auf diese E-Mail antworten oder uns von Montag bis Freitag während der Geschäftszeiten unter (35) 3449-1200 kontaktieren."
+}

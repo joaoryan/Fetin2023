@@ -30,14 +30,22 @@ const ModalUpdateUser = (props: ModalProps) => {
 
   const content = (
     <Styled.Content>
-
       <Styled.Image>
         <img src={image} />
         <MdEdit />
-
       </Styled.Image>
 
       <Styled.InfoDiv>
+        <Styled.Label>
+          Nome:
+          <Styled.Input
+            type="email"
+            defaultValue={''}
+            {...register('email', { required: true })}
+            disabled={formState.isSubmitting}
+          />
+          {formState.errors.email && <Styled.Error>Nome é obrigatório</Styled.Error>}
+        </Styled.Label>
         <Styled.Label>
           Email:
           <Styled.Input
@@ -48,18 +56,6 @@ const ModalUpdateUser = (props: ModalProps) => {
           />
           {formState.errors.email && <Styled.Error>Email é obrigatório</Styled.Error>}
         </Styled.Label>
-
-        <Styled.Label>
-          Senha:
-          <Styled.Input
-            type="password"
-            minLength={8}
-            {...register('password', { required: true })}
-            disabled={formState.isSubmitting}
-          />
-          {formState.errors.password && <Styled.Error>Senha é obrigatória</Styled.Error>}
-        </Styled.Label>
-
         <Styled.Label>
           Telefone:
           <Styled.Input
@@ -67,18 +63,18 @@ const ModalUpdateUser = (props: ModalProps) => {
             {...register('phone', { required: true })}
             disabled={formState.isSubmitting}
           />
-          {formState.errors.email && <Styled.Error>Email é obrigatório</Styled.Error>}
+          {formState.errors.email && <Styled.Error>Telefone é obrigatório</Styled.Error>}
         </Styled.Label>
 
         <Styled.Label>
-          Codigo administrador:
+          Endereço:
           <Styled.Input
             type="text"
             minLength={8}
             {...register('codeAdm', { required: true })}
             disabled={formState.isSubmitting}
           />
-          {formState.errors.codeAdm && <Styled.Error>Codigo do administrador é obrigatória</Styled.Error>}
+          {formState.errors.codeAdm && <Styled.Error>Endereço é obrigatória</Styled.Error>}
         </Styled.Label>
       </Styled.InfoDiv>
 
@@ -101,7 +97,7 @@ const ModalUpdateUser = (props: ModalProps) => {
     <Modal
       title={'EDITAR USUÁRIO'}
       width='900px'
-      top='12vh'
+      top='14vh'
       showButtonClose={false}
       children={isLoading ? loading : content}
       footer={footer}

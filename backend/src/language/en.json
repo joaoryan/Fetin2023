@@ -1,0 +1,20 @@
+{
+  "create_user.subject": "Account activation",
+  "create_user.title": "Hello",
+  "create_user.content1": "You have been invited to access the IOK Platform, where you can manage your menus and equipment.",
+  "create_user.link": "Click here ",
+  "create_user.content2": "to complete your registration on the platform.", 
+  "create_user.content3": "Best regards",
+  "create_user.content4": "Prática Team",
+  "create_user.content5": "If you have any questions, you can respond to this email or contact us at (35) 3449-1200, Monday through Friday during business hours.",
+
+  "reset_user.subject": "Password Reset",
+  "reset_user.title": "Hello",
+  "reset_user.content1": "You recently requested a new access password for the IOK Platform.",
+  "reset_user.content2": "If you have not requested such a change, please disregard this email.",
+  "reset_user.link": "click here.",
+  "reset_user.content3": "Best regards",
+  "reset_user.content4": "Prática Team",
+  "reset_user.content5": "To create a new password, ",
+  "reset_user.content6" : "If you have any questions, you can respond to this email or contact us at (35) 3449-1200, Monday through Friday during business hours."
+}

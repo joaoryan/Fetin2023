@@ -11,6 +11,7 @@ import { RecoverPasswordPage } from '../pages/RecoverPassword';
 import { Profile } from '../pages/Perfil';
 import { Visitant } from '../pages/Visitant';
 import { CreatVisitant } from '../pages/CreatVisitant';
+import { HomeAdm } from '../pages/HomeAdm';
 
 const AppRoutes = () => {
 	return (
@@ -21,6 +22,7 @@ const AppRoutes = () => {
 					<Route path='createAccount' element={<CreateAccount />} />
 					<Route path='RecoverPasswordPage' element={<RecoverPasswordPage />} />
 					<Route path='home' element={<Home />} />
+					<Route path='homeAdm' element={<HomeAdm />} />
 					<Route path='visitant' element={<Visitant />} />
 					<Route path='profile' element={<Profile />} />
 					<Route path='user/:id/visitant/creat' element={<CreatVisitant />} />

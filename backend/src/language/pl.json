@@ -1,0 +1,20 @@
+{
+  "create_user.subject": "Aktywacja konta",
+  "create_user.title": "Cześć",
+  "create_user.content1": "Zostałeś zaproszony do dostępu do Platformy IOK, gdzie możesz zarządzać swoimi menu i sprzętem.",
+  "create_user.link": "Kliknij tutaj ",
+  "create_user.content2": "aby zakończyć rejestrację na platformie.", 
+  "create_user.content3": "Z poważaniem,",
+  "create_user.content4": "Zespół treningowy",
+  "create_user.content5": "Jeśli masz jakiekolwiek pytania, możesz odpowiedzieć na tę wiadomość e-mail lub skontaktować się z nami pod numerem (35) 3449-1200, od poniedziałku do piątku w godzinach pracy.",
+
+  "reset_user.subject": "Resetowania hasła",
+  "reset_user.title": "Cześć",
+  "reset_user.content1": "Niedawno poprosiłeś o nowe hasło dostępu do Platformy IOK.",
+  "reset_user.content2": "Jeśli nie zażądałeś takiej zmiany, zignoruj ​​tę wiadomość e-mail.",
+  "reset_user.link": "Kliknij tutaj.",
+  "reset_user.content3": "Z poważaniem,",
+  "reset_user.content4": "Zespół treningowy",
+  "reset_user.content5": "Aby utworzyć nowe hasło, ",
+  "reset_user.content6" : "Jeśli masz jakiekolwiek pytania, możesz odpowiedzieć na tę wiadomość e-mail lub skontaktować się z nami pod numerem (35) 3449-1200, od poniedziałku do piątku w godzinach pracy."
+}

@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router';
 import * as Styled from './styled';
 import { RiLogoutBoxRLine } from 'react-icons/ri'
 
-
 const Header = () => {
     const navigate = useNavigate();
 

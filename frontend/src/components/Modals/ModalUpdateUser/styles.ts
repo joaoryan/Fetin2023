@@ -54,6 +54,11 @@ export const Image = styled.div`
   gap: 20px;
   svg{
     font-size: 28px;
+    transition: 0.5s;
+    &:hover {
+    transition: 0.5s;
+    color: #F231A5
+  }
   }
   img{
     width: 240px;

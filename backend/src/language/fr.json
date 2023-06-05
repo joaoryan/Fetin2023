@@ -1,0 +1,20 @@
+{
+  "create_user.subject": "Activation de compte",
+  "create_user.title": "Salut",
+  "create_user.content1": "Vous avez été invité à accéder à la plateforme IOK, où vous pouvez gérer vos menus et vos équipements.",
+  "create_user.link": "Cliquez ici ",
+  "create_user.content2": "pour finaliser votre inscription sur la plateforme.", 
+  "create_user.content3": "Cordialement,",
+  "create_user.content4": "Équipe de Prática",
+  "create_user.content5": "Si vous avez des questions, vous pouvez répondre à cet e-mail ou nous contacter au (35) 3449-1200, du lundi au vendredi pendant les heures ouvrables.",
+
+  "reset_user.subject": "Réinitialisation du mot de passe",
+  "reset_user.title": "Salut",
+  "reset_user.content1": "Vous avez récemment demandé un nouveau mot de passe d'accès à la plate-forme IOK.",
+  "reset_user.content2": "Si vous n'avez pas demandé une telle modification, veuillez ne pas tenir compte de cet e-mail.",
+  "reset_user.link": "cliquez ici.",
+  "reset_user.content3": "Cordialement,",
+  "reset_user.content4": "Équipe de Prática",
+  "reset_user.content5": "Pour créer un nouveau mot de passe, ",
+  "reset_user.content6" : "Si vous avez des questions, vous pouvez répondre à cet e-mail ou nous contacter au (35) 3449-1200, du lundi au vendredi pendant les heures ouvrables."
+}
