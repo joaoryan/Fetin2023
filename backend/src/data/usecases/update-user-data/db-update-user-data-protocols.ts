@@ -1,5 +1,0 @@
-export * from '../../../domain/usecases/update-user-data'
-export * from '../../../domain/models/user'
-export * from '../../protocols/criptography/hasher'
-export * from '../../protocols/db/user/update-user-data-repository'
-export * from '../../protocols/db/user/load-user-by-id-repository'

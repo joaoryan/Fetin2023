@@ -1,3 +1,0 @@
-export * from '../../../domain/usecases/load-store-by-company-id'
-export * from '../../../domain/models/store'
-export * from '../../protocols/db/store/load-stores-by-company-id-repository'
