@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import * as Styled from './styled';
 import { BsFillEmojiWinkFill } from 'react-icons/bs';
-import image from '../../assets/image/cat2.jpg';
+import image from '../../assets/image/software1.jpeg';
 
 interface TeamCardProps {
     img: string,
@@ -23,7 +23,7 @@ const TeamCard = ({
     return (
         <Styled.Card time={timeAnimate}>
             <div ref={ref} className={`transform ${inView ? "show" : ""}`}>
-                <img src={image} />
+                <img src={img} />
                 <Styled.Text>{name}</Styled.Text>
                 <Styled.Text1>{work}</Styled.Text1>
             </div>

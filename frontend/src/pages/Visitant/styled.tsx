@@ -29,7 +29,7 @@ export const Regress = styled.div`
 export const BodyDiv = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   -webkit-box-align: center;
   align-items: flex-start;
   padding: 40px;

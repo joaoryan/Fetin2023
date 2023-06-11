@@ -3,12 +3,12 @@ import Loading from '../../Loading';
 import Modal from '../Modal';
 import * as Styled from './styles';
 import { useNavigate } from 'react-router';
-import image from '../../../assets/image/cat2.jpg';
+import image from '../../../assets/image/software1.jpeg';
 import { useForm } from 'react-hook-form';
 import { MdEdit } from 'react-icons/md';
 
 type ModalProps = {
-  id: number;
+  visitantUpdate: any;
   onCancel: () => void;
 };
 
@@ -29,7 +29,7 @@ const ModalUpdateUserVisitant = (props: ModalProps) => {
   const content = (
     <Styled.Content>
       <Styled.Image>
-        <img src={image} />
+        <img src={props.visitantUpdate.img} />
         <div>
           <Styled.ImageDiv>
             alterar
@@ -43,7 +43,7 @@ const ModalUpdateUserVisitant = (props: ModalProps) => {
           Nome:
           <Styled.Input
             type="name"
-            defaultValue={''}
+            defaultValue={props.visitantUpdate.name}
             {...register('name', { required: true })}
             disabled={formState.isSubmitting}
           />
@@ -53,6 +53,7 @@ const ModalUpdateUserVisitant = (props: ModalProps) => {
           Telefone:
           <Styled.Input
             type="phone"
+            defaultValue={props.visitantUpdate.phone}
             {...register('phone', { required: true })}
             disabled={formState.isSubmitting}
           />

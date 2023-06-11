@@ -8,7 +8,7 @@ import AnimateWhenVisible from '../../components/AnimateWhenVisible';
 import { FaArrowLeft } from 'react-icons/fa'
 import TeamCard from '../../components/Equip';
 import Header from '../../components/Hader';
-import image from '../../assets/image/cat2.jpg';
+import image from '../../assets/image/joao-ryan.png';
 import ModalDeleteUser from '../../components/Modals/ModalDeleteUser';
 import ModalUpdateUser from '../../components/Modals/ModalUpdateUser';
 
@@ -23,19 +23,30 @@ export function Profile(): JSX.Element {
   const navigate = useNavigate();
   const [showModalDeleteUser, setShowModalDeleteUser] = useState(false);
   const [showModalUpdateUser, setShowModalUpdateUser] = useState(false);
+  const user =
+  {
+    id: 1,
+    name: 'joao ryan',
+    email: 'test@gmail.com',
+    img: image,
+    phone: '(35) 9 99372979',
+    cpf: '111.111.111-11',
+    endereço: 'Rua em algum lugar'
+  }
+
 
   return (
     <>
 
       {showModalDeleteUser && (
         <ModalDeleteUser
-          id={1}
+          id={user.id}
           onCancel={() => setShowModalDeleteUser(false)}
         />
       )}
       {showModalUpdateUser && (
         <ModalUpdateUser
-          id={1}
+          user={user}
           onCancel={() => setShowModalUpdateUser(false)}
         />
       )}
@@ -54,7 +65,7 @@ export function Profile(): JSX.Element {
 
         <Styled.BodyDiv>
           <Styled.Image>
-            <img src={image} />
+            <img src={user.img} />
           </Styled.Image>
 
           <Styled.InfoDiv>
@@ -62,19 +73,19 @@ export function Profile(): JSX.Element {
             <Styled.Info>
               <div>
                 <Styled.Subtitle>Nome</Styled.Subtitle>
-                <Styled.Text>Joao Ryan dos Santos</Styled.Text>
+                <Styled.Text>{user.name}</Styled.Text>
               </div>
               <div>
                 <Styled.Subtitle>CPF</Styled.Subtitle>
-                <Styled.Text>Joao Ryan dos Santos</Styled.Text>
+                <Styled.Text>{user.cpf}</Styled.Text>
               </div>
               <div>
                 <Styled.Subtitle>Endereço</Styled.Subtitle>
-                <Styled.Text>Joao Ryan dos Santos</Styled.Text>
+                <Styled.Text>{user.endereço}</Styled.Text>
               </div>
               <div>
                 <Styled.Subtitle>Telefone</Styled.Subtitle>
-                <Styled.Text>Joao Ryan dos Santos</Styled.Text>
+                <Styled.Text>{user.phone}</Styled.Text>
               </div>
             </Styled.Info>
             <Styled.DivButton>

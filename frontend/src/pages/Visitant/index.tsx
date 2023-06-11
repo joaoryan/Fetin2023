@@ -11,38 +11,24 @@ import { RiContactsFill } from 'react-icons/ri'
 import { FaArrowLeft } from 'react-icons/fa'
 import TeamCard from '../../components/Equip';
 import Header from '../../components/Hader';
-import image from '../../assets/image/cat2.jpg';
+import image from '../../assets/image/joao-ryan.png';
 import CardVisitant from '../../components/CardVisitant';
 import ModalDeleteUser from '../../components/Modals/ModalDeleteUser';
+import ModalDeleteVisitant from '../../components/Modals/ModalDeleteVisitant';
 //RiContactsFill
 
 export function Visitant(): JSX.Element {
   const [showModalDeleteUser, setShowModalDeleteUser] = useState(false);
   const navigate = useNavigate();
-  const test = [
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' },
-    { nome: 'joao ryan', img: '' }
+  const visitant = [
+    { name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
   ]
 
   return (
     <>
 
       {showModalDeleteUser && (
-        <ModalDeleteUser
+        <ModalDeleteVisitant
           id={1}
           onCancel={() => setShowModalDeleteUser(false)}
         />
@@ -61,8 +47,8 @@ export function Visitant(): JSX.Element {
         </Styled.RegressDiv>
 
         <Styled.BodyDiv>
-          {test.map((item, index) =>
-            <CardVisitant img={item.img} name={item.nome} timeAnimate={index / 4} modalDelete={() => setShowModalDeleteUser(true)} />
+          {visitant.map((item, index) =>
+            <CardVisitant visitant={item} timeAnimate={index / 4} modalDelete={() => setShowModalDeleteUser(true)} />
           )}
 
         </Styled.BodyDiv>

@@ -7,6 +7,10 @@ import { RiContactsFill } from 'react-icons/ri'
 import { RiLogoutBoxRLine } from 'react-icons/ri'
 import TeamCard from '../../components/Equip';
 import Header from '../../components/Hader';
+import image1 from '../../assets/image/joao-ryan.png'
+import image2 from '../../assets/image/matheus.png'
+import image3 from '../../assets/image/joao.png'
+import image4 from '../../assets/image/gustavo.png'
 //RiContactsFill  
 
 export function Home(): JSX.Element {
@@ -67,10 +71,10 @@ export function Home(): JSX.Element {
         <Styled.Title>Nosso time</Styled.Title>
         <Styled.Text1>Somos um grupo dinâmico de indivíduos apaixonados pelo que fazemos e dedicados a oferecer os melhores resultados para nossos clientes.</Styled.Text1>
         <Styled.TeamCardDiv>
-          <TeamCard img={''} name={'João Ryan'} work={'develop'} timeAnimate={1} />
-          <TeamCard img={''} name={'João Ryan'} work={'develop'} timeAnimate={1.5} />
-          <TeamCard img={''} name={'João Ryan'} work={'develop'} timeAnimate={2} />
-          <TeamCard img={''} name={'João Ryan'} work={'develop'} timeAnimate={2.5} />
+          <TeamCard img={image1} name={'João Ryan'} work={'develop'} timeAnimate={1} />
+          <TeamCard img={image2} name={'Matheus'} work={'develop'} timeAnimate={1.5} />
+          <TeamCard img={image3} name={'João Victor'} work={'develop'} timeAnimate={2} />
+          <TeamCard img={image4} name={'Gustavo'} work={'develop'} timeAnimate={2.5} />
         </Styled.TeamCardDiv>
       </Styled.TeamDiv>
     </Styled.Container>

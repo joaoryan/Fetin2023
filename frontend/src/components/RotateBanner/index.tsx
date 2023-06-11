@@ -6,11 +6,11 @@ import React, {
 
 import { DivSlider, ImageSlider } from "./style";
 
-import imageLogin1 from '../../assets/image/cat1.jpg';
-import imageLogin2 from '../../assets/image/cat2.jpg';
-import imageLogin3 from '../../assets/image/cat3.jpg';
+import imageLogin1 from '../../assets/image/software1.jpeg';
+import imageLogin2 from '../../assets/image/software2.jpeg';
+import imageLogin3 from '../../assets/image/software3.jpeg';
 
-let time = 10000;
+let time = 5000;
 const images = [imageLogin1, imageLogin2, imageLogin3];
 let max = images.length - 1;
 

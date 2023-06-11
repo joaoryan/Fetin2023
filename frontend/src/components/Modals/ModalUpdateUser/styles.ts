@@ -54,16 +54,23 @@ export const Image = styled.div`
   gap: 20px;
   svg{
     font-size: 28px;
-    transition: 0.5s;
-    &:hover {
-    transition: 0.5s;
-    color: #F231A5
-  }
   }
   img{
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
+    width: 229px;
+    height: 171px;
+    border-radius: 10%;
+  }
+`
+
+export const ImageDiv = styled.div`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.5s;
+  &:hover {
+    transition: 0.5s;
+    color: #F231A5
   }
 `
 
@@ -118,8 +125,13 @@ export const Subtitle = styled.div`
 
 `
 export const Text = styled.div`
-  font-size: 20px;
-
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    transition: 0.5s;
+    color: #F231A5
+  }
 `
 
 export const DivButton = styled.div`

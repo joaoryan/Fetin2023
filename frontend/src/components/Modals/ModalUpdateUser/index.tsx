@@ -3,20 +3,20 @@ import Loading from '../../Loading';
 import Modal from '../Modal';
 import * as Styled from './styles';
 import { useNavigate } from 'react-router';
-import image from '../../../assets/image/cat2.jpg';
+import image from '../../../assets/image/software1.jpeg';
 import { useForm } from 'react-hook-form';
 import { MdEdit } from 'react-icons/md';
 
 type ModalProps = {
-  id: number;
+  user: any;
   onCancel: () => void;
 };
 
 type FormValues = {
   email: string;
   phone: number;
-  password: string;
-  codeAdm: string;
+  name: string;
+  endereço: string;
 };
 
 const ModalUpdateUser = (props: ModalProps) => {
@@ -31,17 +31,22 @@ const ModalUpdateUser = (props: ModalProps) => {
   const content = (
     <Styled.Content>
       <Styled.Image>
-        <img src={image} />
-        <MdEdit />
+        <img src={props.user.img} />
+        <div>
+          <Styled.ImageDiv>
+            alterar
+            <MdEdit />
+          </Styled.ImageDiv>
+        </div>
       </Styled.Image>
 
       <Styled.InfoDiv>
         <Styled.Label>
           Nome:
           <Styled.Input
-            type="email"
-            defaultValue={''}
-            {...register('email', { required: true })}
+            type="text"
+            defaultValue={props.user.name}
+            {...register('name', { required: true })}
             disabled={formState.isSubmitting}
           />
           {formState.errors.email && <Styled.Error>Nome é obrigatório</Styled.Error>}
@@ -49,8 +54,8 @@ const ModalUpdateUser = (props: ModalProps) => {
         <Styled.Label>
           Email:
           <Styled.Input
-            type="email"
-            defaultValue={''}
+            type="text"
+            defaultValue={props.user.email}
             {...register('email', { required: true })}
             disabled={formState.isSubmitting}
           />
@@ -60,24 +65,28 @@ const ModalUpdateUser = (props: ModalProps) => {
           Telefone:
           <Styled.Input
             type="phone"
+            defaultValue={props.user.phone}
             {...register('phone', { required: true })}
             disabled={formState.isSubmitting}
           />
-          {formState.errors.email && <Styled.Error>Telefone é obrigatório</Styled.Error>}
+          {formState.errors.phone && <Styled.Error>Telefone é obrigatório</Styled.Error>}
         </Styled.Label>
 
         <Styled.Label>
           Endereço:
           <Styled.Input
             type="text"
-            minLength={8}
-            {...register('codeAdm', { required: true })}
+            defaultValue={props.user.endereço}
+            {...register('endereço', { required: true })}
             disabled={formState.isSubmitting}
           />
-          {formState.errors.codeAdm && <Styled.Error>Endereço é obrigatória</Styled.Error>}
+          {formState.errors.endereço && <Styled.Error>Endereço é obrigatória</Styled.Error>}
         </Styled.Label>
-      </Styled.InfoDiv>
+        <Styled.Text onClick={() => navigate('/RecoverPasswordPage')}>
+          alterar senha
+        </Styled.Text>
 
+      </Styled.InfoDiv>
     </Styled.Content>
   );
 

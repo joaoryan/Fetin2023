@@ -1,21 +1,18 @@
 import { useInView } from "react-intersection-observer";
 import * as Styled from './styled';
-import image from '../../assets/image/cat2.jpg';
 import { MdDeleteForever, MdEdit } from "react-icons/md";
 import ModalUpdateUserVisitant from "../Modals/ModalUpdateVisitant";
 import { useState } from "react";
 
 interface CardProps {
-    img: string,
-    name: string,
+    visitant: any,
     timeAnimate: number,
     threshold?: number,
     modalDelete: () => void,
 }
 
 const CardVisitant = ({
-    img,
-    name,
+    visitant,
     timeAnimate,
     threshold = 0.2,
     modalDelete,
@@ -26,7 +23,7 @@ const CardVisitant = ({
         <>
             {showModalUpdateUserVisitant && (
                 <ModalUpdateUserVisitant
-                    id={1}
+                    visitantUpdate={visitant}
                     onCancel={() => setShowModalUpdateUserVisitant(false)}
                 />
             )}
@@ -42,8 +39,8 @@ const CardVisitant = ({
                             <MdEdit />
                         </div>
                     </Styled.Icon>
-                    <img src={image} />
-                    <Styled.Text>{name}</Styled.Text>
+                    <img src={visitant.img} />
+                    <Styled.Text>{visitant.name}</Styled.Text>
                 </div>
             </Styled.Card>
         </>

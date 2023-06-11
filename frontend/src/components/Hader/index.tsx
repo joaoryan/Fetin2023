@@ -8,7 +8,7 @@ const Header = () => {
 
     return (
         <Styled.Hader>
-            Logo
+
             <Styled.LogoutButton onClick={() => navigate(`/`)}>
                 Sair
                 <RiLogoutBoxRLine />
