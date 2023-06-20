@@ -5,6 +5,7 @@ import * as Styled from './styles';
 import { useNavigate } from 'react-router';
 import { useForm } from 'react-hook-form';
 import { MdPhotoSizeSelectActual } from 'react-icons/md';
+import CameraInput from '../../CameraInput';
 
 type ModalProps = {
   id: number;
@@ -25,13 +26,19 @@ const ModalCreatVisitant = (props: ModalProps) => {
 
   };
 
+  const handleCapture = (imageData: string) => {
+    // Faça algo com a imagem capturada, como enviar para o servidor
+    console.log('Image captured:', imageData);
+  };
+
   const content = (
     <Styled.Content>
       <Styled.Image>
-        <MdPhotoSizeSelectActual />
+        <CameraInput onCapture={handleCapture} />
+
         <div>
           {/*
-       
+       <MdPhotoSizeSelectActual />
           <Styled.ImageDiv>
             alterar
             <MdEdit />
