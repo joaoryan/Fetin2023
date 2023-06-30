@@ -11,10 +11,16 @@ import image1 from '../../assets/image/joao-ryan.png'
 import image2 from '../../assets/image/matheus.png'
 import image3 from '../../assets/image/joao.png'
 import image4 from '../../assets/image/gustavo.png'
+import CameraInput from '../../components/CameraInput';
 //RiContactsFill  
 
 export function Home(): JSX.Element {
   const navigate = useNavigate();
+
+  const handleCapture = (imageData: string) => {
+    // Faça algo com a imagem capturada, como enviar para o servidor
+    console.log('Image captured:', imageData);
+  };
 
   return (
     <><Styled.Container>
@@ -54,6 +60,7 @@ export function Home(): JSX.Element {
           áreas restritas.pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas
         </Styled.Text1>
         <Styled.info2Div>
+          <CameraInput onCapture={handleCapture} />
           <AnimateWhenVisible icon={'FaSearch'} text={`Um sistema de reconhecimento facial pode oferecer uma maneira conveniente de desbloquear portas ou acessar áreas restritas sem
            a necessidadede chaves ou senhas Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas.`} />
 
