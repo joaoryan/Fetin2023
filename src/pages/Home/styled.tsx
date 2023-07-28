@@ -43,6 +43,11 @@ export const CardDiv = styled.div`
   flex-direction: row;
   justify-content: space-around;
   margin-top: 200px;
+  @media (max-width: 540px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px
+  }
 `;
 
 export const CardButton = styled.div`
@@ -72,12 +77,34 @@ export const CardButtonDiv = styled.div`
     transition: 0.5s;
     background-color: ${props => props.theme.colors.hoverColor};
   }
- 
+  @media (max-width: 1040px) {
+    width: 212px;
+    height: 212px;
+    :hover{
+      width: 218px;
+      height: 218px;
+    } 
+    svg{
+      font-size: 60px;
+    }
+  } 
+  @media (max-width: 740px) {
+    width: 162px;
+    height: 162px;
+    :hover{
+      width: 168px;
+      height: 168px;
+    }  
+    svg{
+      font-size: 40px;
+    }
+  } 
 `;
 
 export const backgroundGif = styled.div`
   width: 100%;
-  height: 500px;
+  padding-bottom: 20px;
+  //height: 500px;
   background-image: url('https://media.giphy.com/media/3WuagBkXjI2SHfgDsU/giphy.gif');
   background-size: contain;
 `;
@@ -87,6 +114,12 @@ export const infoDiv = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 140px 180px 0px 180px;
+  @media (max-width: 1000px) {
+    margin: 140px 40px 0px 40px;
+  }
+  @media (max-width: 600px) {
+    margin: 140px 20px 0px 20px;
+  }
 `;
 
 export const TeamDiv = styled.div`
@@ -94,6 +127,12 @@ export const TeamDiv = styled.div`
   flex-direction: column;
   gap: 0px;
   margin: 100px 160px 0px 160px;
+   @media (max-width: 1000px) {
+    margin: 140px 40px 0px 40px;
+  }
+  @media (max-width: 600px) {
+    margin: 140px 20px 0px 20px;
+  }
 `;
 
 export const TeamCardDiv = styled.div`
@@ -109,6 +148,12 @@ export const info2Div = styled.div`
   align-items: center;
   gap: 80px;
   margin: 110px 100px 0px 100px;
+   @media (max-width: 1000px) {
+    margin: 140px 40px 0px 40px;
+  }
+  @media (max-width: 600px) {
+    margin: 140px 20px 0px 20px;
+  }
 `;
 
 
@@ -126,6 +171,12 @@ export const divButton = styled.div`
 export const Title = styled.h1`
   font-size: 34px;
   cursor: default;
+  @media (max-width: 1040px) {
+    font-size: 24px;
+  } 
+  @media (max-width: 740px) {
+    font-size: 18px;
+  }
 `;
 
 export const Text1 = styled.div`

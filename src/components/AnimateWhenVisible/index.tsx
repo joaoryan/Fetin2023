@@ -12,7 +12,7 @@ interface AnimateWhenVisibleProps {
 const AnimateWhenVisible = ({
     icon,
     text,
-    threshold = 0.5,
+    threshold = 0.01,
 }: AnimateWhenVisibleProps) => {
     const { ref, inView } = useInView({ threshold });
     return (

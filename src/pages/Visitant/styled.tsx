@@ -13,6 +13,9 @@ export const Container = styled.div`
 export const RegressDiv = styled.div`
   font-size: 20px;
   padding: 20px 0px 0px 60px;
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
 `;
 
 export const Regress = styled.div`
@@ -29,7 +32,7 @@ export const Regress = styled.div`
 export const BodyDiv = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   -webkit-box-align: center;
   align-items: flex-start;
   padding: 40px;

@@ -10,7 +10,7 @@ export const Container = styled.div<ContainerProps>`
   z-index: 10;
   position: fixed;
   top:  ${(props) => props.top};
-  left: 40%;
+  left: 10%;
   width: 80%;
   min-width: 260px;
   max-height: 80vh;

@@ -5,6 +5,7 @@ export const Content = styled.div`
   width: 100%;
   min-height: 100px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 `;

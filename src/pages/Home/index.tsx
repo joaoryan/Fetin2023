@@ -60,18 +60,17 @@ export function Home(): JSX.Element {
           áreas restritas.pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas
         </Styled.Text1>
         <Styled.info2Div>
-          <CameraInput onCapture={handleCapture} />
           <AnimateWhenVisible icon={'FaSearch'} text={`Um sistema de reconhecimento facial pode oferecer uma maneira conveniente de desbloquear portas ou acessar áreas restritas sem
-           a necessidadede chaves ou senhas Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas.`} />
+            a necessidadede chaves ou senhas Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas.`} />
 
           <AnimateWhenVisible icon={'FaSearch'} text={`Um sistema de reconhecimento facial pode oferecer uma maneira conveniente de desbloquear portas ou acessar áreas restritas sem
-           a necessidadede chaves ou senhas Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas.`} />
+            a necessidadede chaves ou senhas Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas.`} />
 
           <AnimateWhenVisible icon={'FaSearch'} text={`Um sistema de reconhecimento facial pode oferecer uma maneira conveniente de desbloquear portas ou acessar áreas restritas sem
-           a necessidadede chaves ou senhas Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas.`} />
+            a necessidadede chaves ou senhas Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas.`} />
 
           <AnimateWhenVisible icon={'FaSearch'} text={`Um sistema de reconhecimento facial pode oferecer uma maneira conveniente de desbloquear portas ou acessar áreas restritas sem
-           a necessidadede chaves ou senhas Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas.`} />
+            a necessidadede chaves ou senhas Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas.`} />
         </Styled.info2Div>
       </Styled.infoDiv>
       <Styled.TeamDiv>

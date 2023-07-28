@@ -9,6 +9,10 @@ export const Card = styled.div<Props>`
         max-width: 180px;
         border-radius: 10%;
         margin-bottom: 20px;
+        @media (max-width: 1150px) {
+            width: 90%;
+        }
+       
     }
     .transform {
         display: flex;

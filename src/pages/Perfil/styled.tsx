@@ -32,16 +32,24 @@ export const BodyDiv = styled.div`
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
 `;
 
 export const Image = styled.div`
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
   img{
     width: 400px;
     height: 400px;
     border-radius: 50%;
+    @media (max-width: 1100px) {
+      width: 300px;
+      height: 300px;
+    }
+    @media (max-width: 400px) {
+      width: 200px;
+      height: 200px;
+    }
   }
 `
 
@@ -56,6 +64,12 @@ export const InfoDiv = styled.div`
   border-radius: 4%;
   gap: 30px;
   padding: 20px 60px;
+  @media (max-width: 1100px) {
+    width: 80%;
+    height: 52%;
+    padding: 5px 20px;
+    gap: 20px;
+  }
 `
 
 export const Title = styled.div`
@@ -94,6 +108,9 @@ export const Button = styled.button`
   cursor: pointer;
   margin-top: 16px;
   width: 168px;
+  @media (max-width: 700px) {
+    width: 120px;
+  }
   &:hover {
     background-color: ${props => props.theme.colors.hoverColor}
   }
