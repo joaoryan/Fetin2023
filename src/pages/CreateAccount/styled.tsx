@@ -12,11 +12,18 @@ export const Container = styled.div`
 export const DivInputs = styled.div`
   width: 48%;
   padding: 40px;
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 export const DivImage = styled.div`
   width: 90%;
   height: 100%;
+  @media (max-width: 900px) {
+    width: 0%;
+    height: 0%;
+  }
 `;
 
 export const divButton = styled.div`

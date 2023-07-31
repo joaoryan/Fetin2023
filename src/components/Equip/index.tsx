@@ -25,7 +25,6 @@ const TeamCard = ({
             <div ref={ref} className={`transform ${inView ? "show" : ""}`}>
                 <img src={img} />
                 <Styled.Text>{name}</Styled.Text>
-                <Styled.Text1>{work}</Styled.Text1>
             </div>
         </Styled.Card>
     );

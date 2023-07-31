@@ -41,10 +41,6 @@ export function Visitant(): JSX.Element {
         />
       )}
       <Styled.Container>
-        {/*
-       <Styled.backgroundGif>
-       </Styled.backgroundGif>
-       */}
         <Header />
         <Styled.RegressDiv>
           <Styled.Regress onClick={() => navigate(`/home`)}>

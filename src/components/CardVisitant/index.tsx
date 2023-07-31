@@ -3,6 +3,7 @@ import * as Styled from './styled';
 import { MdDeleteForever, MdEdit } from "react-icons/md";
 import ModalUpdateUserVisitant from "../Modals/ModalUpdateVisitant";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface CardProps {
     visitant: any,
@@ -17,6 +18,7 @@ const CardVisitant = ({
     threshold = 0.2,
     modalDelete,
 }: CardProps) => {
+    const navigate = useNavigate();
     const [showModalUpdateUserVisitant, setShowModalUpdateUserVisitant] = useState(false);
     const { ref, inView } = useInView({ threshold })
     return (
@@ -34,7 +36,7 @@ const CardVisitant = ({
                             Remover
                             <MdDeleteForever />
                         </div>
-                        <div onClick={() => setShowModalUpdateUserVisitant(true)}>
+                        <div onClick={() => navigate('update')}>
                             Editar
                             <MdEdit />
                         </div>

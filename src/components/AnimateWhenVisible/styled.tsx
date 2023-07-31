@@ -5,7 +5,7 @@ export const Container = styled.div`
         font-size: 80px
     }
     .transform {
-       display: flex;
+        display: flex;
         flex-direction: row;
         align-items: center;
         gap: 50px;
@@ -17,6 +17,15 @@ export const Container = styled.div`
         opacity: 1;
         transform: translatex(0px);
     }
+    @media (max-width: 740px) {
+        .transform {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+            svg{
+            font-size: 60px
+        }
+    }
 `;
 
 export const Text = styled.div`
@@ -27,4 +36,7 @@ export const Text = styled.div`
     justify-content: center;
     font-size: 20px;
     cursor: default;
+    @media (max-width: 740px) {
+        font-size: 16px;
+    }
 `;

@@ -29,7 +29,6 @@ export function RecoverPasswordPage(): JSX.Element {
             />
             {formState.errors.email && <Styled.Error>Email é obrigatório</Styled.Error>}
           </Styled.Label>
-
           <Styled.divButton>
             <Styled.Button onClick={() => navigate(`/`)} disabled={formState.isSubmitting}>
               {formState.isSubmitting ? 'Aguarde...' : 'voltar'}

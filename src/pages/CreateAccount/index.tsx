@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 import RotateBanner from '../../components/RotateBanner';
 import image from '../../assets/image/cat2.jpg';
 import { FaImages } from 'react-icons/fa';
+import CameraInput from '../../components/CameraInput';
 
 type FormValues = {
   email: string;
@@ -20,13 +21,18 @@ export function CreateAccount(): JSX.Element {
     console.log(data); // Aqui você pode enviar os dados para a API de login
   };
 
+  const handleCapture = (imageData: string) => {
+    // Faça algo com a imagem capturada, como enviar para o servidor
+    console.log('Image captured:', imageData);
+  };
+
   return (
     <Styled.Container>
       <Styled.DivInputs>
         <Styled.Title>Crie sua conta</Styled.Title>
         <Styled.Form onSubmit={handleSubmit(onSubmit)}>
           <Styled.Image>
-            <FaImages />
+            <CameraInput onCapture={handleCapture} />
           </Styled.Image>
           <Styled.Label>
             Email:

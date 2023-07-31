@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Project } from '../pages/Project';
-import { Serie } from '../pages/Serie';
 import { Home } from '../pages/Home';
 import { Page404 } from '../pages/Page404';
 import Layout from '../pages/Layout';
@@ -12,6 +10,8 @@ import { Profile } from '../pages/Perfil';
 import { Visitant } from '../pages/Visitant';
 import { CreatVisitant } from '../pages/CreatVisitant';
 import { HomeAdm } from '../pages/HomeAdm';
+import { UpdateVisitant } from '../pages/UpdateVisitant';
+import { UpdateUser } from '../pages/UpdateUser';
 
 const AppRoutes = () => {
 	return (
@@ -25,7 +25,9 @@ const AppRoutes = () => {
 					<Route path='homeAdm' element={<HomeAdm />} />
 					<Route path='visitant' element={<Visitant />} />
 					<Route path='profile' element={<Profile />} />
+					<Route path='profile/update' element={<UpdateUser />} />
 					<Route path='user/:id/visitant/creat' element={<CreatVisitant />} />
+					<Route path='visitant/update' element={<UpdateVisitant />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

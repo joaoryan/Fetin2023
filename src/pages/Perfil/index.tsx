@@ -92,7 +92,7 @@ export function Profile(): JSX.Element {
               <Styled.Button onClick={() => setShowModalDeleteUser(true)}>
                 deletar
               </Styled.Button>
-              <Styled.Button onClick={() => setShowModalUpdateUser(true)} >
+              <Styled.Button onClick={() => navigate('update')} >
                 editar
               </Styled.Button>
             </Styled.DivButton>

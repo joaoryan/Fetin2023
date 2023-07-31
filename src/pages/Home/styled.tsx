@@ -42,7 +42,7 @@ export const CardDiv = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 200px;
+  margin-top: 100px;
   @media (max-width: 540px) {
     flex-direction: column;
     align-items: center;
@@ -140,6 +140,12 @@ export const TeamCardDiv = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin-top: 42px;
+  @media (max-width: 1150px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    gap: 20px;
+  }
 `;
 
 export const info2Div = styled.div`
@@ -182,6 +188,9 @@ export const Title = styled.h1`
 export const Text1 = styled.div`
   font-size: 20px;
   cursor: default;
+  @media (max-width: 740px) {
+    font-size: 16px;
+  } 
   &:hover {
     color: #F231A5
   }

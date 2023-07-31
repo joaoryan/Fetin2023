@@ -11,6 +11,7 @@ export const Card = styled.div<Props>`
         margin-bottom: 20px;
         @media (max-width: 1150px) {
             width: 90%;
+            height: 100%;
         }
        
     }
@@ -33,6 +34,9 @@ export const Text = styled.div`
     font-size: 20px;
     font-weight: bold;
     cursor: default;
+    @media (max-width: 740px) {
+        font-size: 14px;
+    }
 `;
 
 export const Text1 = styled.div`

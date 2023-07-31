@@ -5,13 +5,22 @@ import Header from '../../components/Hader';
 import ModalCreatVisitant from '../../components/Modals/ModalCreatVisitant';
 import CameraInput from '../../components/CameraInput';
 import { FaArrowLeft } from 'react-icons/fa';
+import image from '../../assets/image/joao-ryan.png';
+
+const user =
+{
+  id: 1,
+  name: 'joao ryan',
+  img: image,
+  phone: '(35) 9 99372979',
+}
 
 type FormValues = {
   name: string;
   phone: number;
 };
 
-export function CreatVisitant(): JSX.Element {
+export function UpdateVisitant(): JSX.Element {
   const { register, handleSubmit, formState } = useForm<FormValues>();
   const navigate = useNavigate();
 
@@ -24,7 +33,7 @@ export function CreatVisitant(): JSX.Element {
     <>
       <Styled.Page>
         <Styled.Content>
-          <Styled.Title>CRIAR USUÁRIO</Styled.Title>
+          <Styled.Title>EDITAR USUÁRIO</Styled.Title>
           <div>
             <Styled.InputsDiv>
               <Styled.Image>
@@ -35,7 +44,7 @@ export function CreatVisitant(): JSX.Element {
                   Nome:
                   <Styled.Input
                     type="text"
-                    defaultValue={''}
+                    defaultValue={user.name}
                     {...register('name', { required: true })}
                     disabled={formState.isSubmitting}
                   />
@@ -45,6 +54,7 @@ export function CreatVisitant(): JSX.Element {
                   Telefone:
                   <Styled.Input
                     type="phone"
+                    defaultValue={user.phone}
                     {...register('phone', { required: true })}
                     disabled={formState.isSubmitting}
                   />
