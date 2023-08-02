@@ -2,20 +2,22 @@ import { useForm } from 'react-hook-form';
 import * as Styled from './styled';
 import { useNavigate } from 'react-router';
 import Header from '../../components/Hader';
-import ModalCreatVisitant from '../../components/Modals/ModalCreatVisitant';
 import CameraInput from '../../components/CameraInput';
 import { FaArrowLeft } from 'react-icons/fa';
 import image from '../../assets/image/joao-ryan.png';
+import { useState } from 'react';
+import { updateUserResident } from '../../services/axios';
 
 type FormValues = {
   name: string;
   phone: number;
-  cpf: string;
+  email: string;
   address: string
 };
 
 export function UpdateUser(): JSX.Element {
   const { register, handleSubmit, formState } = useForm<FormValues>();
+  const [img, setImg] = useState<string[]>([]);
   const navigate = useNavigate();
 
   const user =
@@ -25,19 +27,37 @@ export function UpdateUser(): JSX.Element {
     email: 'test@gmail.com',
     img: image,
     phone: '(35) 9 99372979',
-    cpf: '111.111.111-11',
     address: 'Rua em algum lugar'
   }
 
+  const onSubmit = (data: FormValues) => {
+    const user = {
+      name: data.name,
+      phone: data.phone,
+      email: data.email,
+      address: data.address,
+      image: img
+    }
+    updateUserResident(user, 1)
+      .then(resp => {
+        console.log(resp)
+        navigate(-1)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+    navigate(-1)
+  };
+
   const handleCapture = (imageData: string) => {
-    // Faça algo com a imagem capturada, como enviar para o servidor
-    console.log('Image captured:', imageData);
+    img.push(imageData)
+    setImg(img)
   };
 
   return (
     <>
       <Styled.Page>
-        <Styled.Content>
+        <Styled.Content onSubmit={handleSubmit(onSubmit)}>
           <Styled.Title>EDITAR USUÁRIO</Styled.Title>
           <div>
             <Styled.InputsDiv>
@@ -56,14 +76,14 @@ export function UpdateUser(): JSX.Element {
                   {formState.errors.name && <Styled.Error>Nome é obrigatório</Styled.Error>}
                 </Styled.Label>
                 <Styled.Label>
-                  CPF:
+                  Email:
                   <Styled.Input
                     type="text"
-                    defaultValue={user.cpf}
-                    {...register('cpf', { required: true })}
+                    defaultValue={user.email}
+                    {...register('email', { required: true })}
                     disabled={formState.isSubmitting}
                   />
-                  {formState.errors.cpf && <Styled.Error>CPF é obrigatório</Styled.Error>}
+                  {formState.errors.email && <Styled.Error>email é obrigatório</Styled.Error>}
                 </Styled.Label>
                 <Styled.Label>
                   Endereço:

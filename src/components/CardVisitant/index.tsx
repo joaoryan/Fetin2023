@@ -1,8 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import * as Styled from './styled';
 import { MdDeleteForever, MdEdit } from "react-icons/md";
-import ModalUpdateUserVisitant from "../Modals/ModalUpdateVisitant";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface CardProps {
@@ -19,16 +17,10 @@ const CardVisitant = ({
     modalDelete,
 }: CardProps) => {
     const navigate = useNavigate();
-    const [showModalUpdateUserVisitant, setShowModalUpdateUserVisitant] = useState(false);
     const { ref, inView } = useInView({ threshold })
     return (
         <>
-            {showModalUpdateUserVisitant && (
-                <ModalUpdateUserVisitant
-                    visitantUpdate={visitant}
-                    onCancel={() => setShowModalUpdateUserVisitant(false)}
-                />
-            )}
+
             <Styled.Card time={timeAnimate}>
                 <div ref={ref} className={`transform ${inView ? "show" : ""}`}>
                     <Styled.Icon>

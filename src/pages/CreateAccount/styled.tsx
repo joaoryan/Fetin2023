@@ -60,7 +60,7 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   padding: 16px;
-  gap: 20px;
+  gap: 10px;
 `;
 
 export const Label = styled.label`

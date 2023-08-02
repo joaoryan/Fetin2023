@@ -12,7 +12,7 @@ export function RecoverPasswordPage(): JSX.Element {
   const navigate = useNavigate();
 
   const onSubmit = (data: FormValues) => {
-    console.log(data); // Aqui você pode enviar os dados para a API de login
+    console.log(data);
   };
 
   return (

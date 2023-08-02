@@ -13,7 +13,6 @@ import TeamCard from '../../components/Equip';
 import Header from '../../components/Hader';
 import image from '../../assets/image/joao-ryan.png';
 import CardVisitant from '../../components/CardVisitant';
-import ModalDeleteUser from '../../components/Modals/ModalDeleteUser';
 import ModalDeleteVisitant from '../../components/Modals/ModalDeleteVisitant';
 //RiContactsFill
 

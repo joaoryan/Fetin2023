@@ -2,9 +2,10 @@ import { useForm } from 'react-hook-form';
 import * as Styled from './styled';
 import { useNavigate } from 'react-router';
 import Header from '../../components/Hader';
-import ModalCreatVisitant from '../../components/Modals/ModalCreatVisitant';
 import CameraInput from '../../components/CameraInput';
 import { FaArrowLeft } from 'react-icons/fa';
+import { creatVisitantResident } from '../../services/axios';
+import { useState } from 'react';
 
 type FormValues = {
   name: string;
@@ -13,17 +14,35 @@ type FormValues = {
 
 export function CreatVisitant(): JSX.Element {
   const { register, handleSubmit, formState } = useForm<FormValues>();
+  const [img, setImg] = useState<string[]>([]);
   const navigate = useNavigate();
 
   const handleCapture = (imageData: string) => {
-    // Faça algo com a imagem capturada, como enviar para o servidor
-    console.log('Image captured:', imageData);
+    img.push(imageData)
+    setImg(img)
+  };
+
+  const onSubmit = (data: FormValues) => {
+    const user = {
+      name: data.name,
+      phone: data.phone,
+      image: img
+    }
+    creatVisitantResident(user, 1)
+      .then(resp => {
+        console.log(resp)
+        navigate('/home')
+      })
+      .catch(error => {
+        console.log(error)
+      })
+    navigate('/home')
   };
 
   return (
     <>
       <Styled.Page>
-        <Styled.Content>
+        <Styled.Content onSubmit={handleSubmit(onSubmit)}>
           <Styled.Title>CRIAR USUÁRIO</Styled.Title>
           <div>
             <Styled.InputsDiv>
@@ -58,7 +77,7 @@ export function CreatVisitant(): JSX.Element {
               <Styled.Button onClick={() => navigate(-1)} >
                 {'voltar'}
               </Styled.Button>
-              <Styled.Button >
+              <Styled.Button type="submit" >
                 {'salvar'}
               </Styled.Button>
             </Styled.ButtonDiv>

@@ -5,8 +5,11 @@ import RotateBanner from '../../components/RotateBanner';
 import image from '../../assets/image/cat2.jpg';
 import { FaImages } from 'react-icons/fa';
 import CameraInput from '../../components/CameraInput';
+import { signup } from '../../services/axios';
+import { useState } from 'react';
 
 type FormValues = {
+  name: string;
   email: string;
   phone: number;
   password: string;
@@ -15,15 +18,30 @@ type FormValues = {
 
 export function CreateAccount(): JSX.Element {
   const { register, handleSubmit, formState } = useForm<FormValues>();
+  const [img, setImg] = useState<string[]>([]);
   const navigate = useNavigate();
 
   const onSubmit = (data: FormValues) => {
-    console.log(data); // Aqui você pode enviar os dados para a API de login
+    const user = {
+      email: data.email,
+      phone: data.phone,
+      password: data.password,
+      codeAdm: data.codeAdm,
+      image: img
+    }
+    signup(user)
+      .then(resp => {
+        console.log(resp)
+        navigate('/')
+      })
+      .catch(error => {
+        console.log(error)
+      })
   };
 
   const handleCapture = (imageData: string) => {
-    // Faça algo com a imagem capturada, como enviar para o servidor
-    console.log('Image captured:', imageData);
+    img.push(imageData)
+    setImg(img)
   };
 
   return (
@@ -34,6 +52,17 @@ export function CreateAccount(): JSX.Element {
           <Styled.Image>
             <CameraInput onCapture={handleCapture} />
           </Styled.Image>
+
+          <Styled.Label>
+            Nome:
+            <Styled.Input
+              type="name"
+              {...register('name', { required: true })}
+              disabled={formState.isSubmitting}
+            />
+            {formState.errors.name && <Styled.Error>Nome é obrigatório</Styled.Error>}
+          </Styled.Label>
+
           <Styled.Label>
             Email:
             <Styled.Input

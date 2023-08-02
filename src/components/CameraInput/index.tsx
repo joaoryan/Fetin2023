@@ -11,13 +11,20 @@ const CameraInput: React.FC<CameraInputProps> = ({ onCapture }) => {
     const webcamRef = useRef<Webcam>(null);
     const [numPhotosTaken, setNumPhotosTaken] = useState<number>(0);
 
-    console.log(numPhotosTaken)
+    function delay(delay: number) {
+        return new Promise(r => {
+            setTimeout(r, delay);
+        })
+    }
 
-    const capturePhoto = () => {
+    const capturePhoto = async () => {
         const imageData = webcamRef.current?.getScreenshot();
         if (imageData) {
-            onCapture(imageData)
-            setNumPhotosTaken(numPhotosTaken + 1)
+            for (let i = 0; i <= 10; i++) {
+                await delay(1000);
+                onCapture(imageData)
+                setNumPhotosTaken(i)
+            }
         }
     };
 

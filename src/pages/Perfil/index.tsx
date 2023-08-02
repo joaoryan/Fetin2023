@@ -10,7 +10,6 @@ import TeamCard from '../../components/Equip';
 import Header from '../../components/Hader';
 import image from '../../assets/image/joao-ryan.png';
 import ModalDeleteUser from '../../components/Modals/ModalDeleteUser';
-import ModalUpdateUser from '../../components/Modals/ModalUpdateUser';
 
 //RiContactsFill
 
@@ -22,7 +21,7 @@ type FormValues = {
 export function Profile(): JSX.Element {
   const navigate = useNavigate();
   const [showModalDeleteUser, setShowModalDeleteUser] = useState(false);
-  const [showModalUpdateUser, setShowModalUpdateUser] = useState(false);
+
   const user =
   {
     id: 1,
@@ -37,17 +36,10 @@ export function Profile(): JSX.Element {
 
   return (
     <>
-
       {showModalDeleteUser && (
         <ModalDeleteUser
           id={user.id}
           onCancel={() => setShowModalDeleteUser(false)}
-        />
-      )}
-      {showModalUpdateUser && (
-        <ModalUpdateUser
-          user={user}
-          onCancel={() => setShowModalUpdateUser(false)}
         />
       )}
       <Styled.Container>

@@ -1,11 +1,10 @@
 import { useForm } from 'react-hook-form';
 import * as Styled from './styled';
 import { useNavigate } from 'react-router';
-import Header from '../../components/Hader';
-import ModalCreatVisitant from '../../components/Modals/ModalCreatVisitant';
 import CameraInput from '../../components/CameraInput';
-import { FaArrowLeft } from 'react-icons/fa';
 import image from '../../assets/image/joao-ryan.png';
+import { updateVisitant } from '../../services/axios';
+import { useState } from 'react';
 
 const user =
 {
@@ -22,17 +21,35 @@ type FormValues = {
 
 export function UpdateVisitant(): JSX.Element {
   const { register, handleSubmit, formState } = useForm<FormValues>();
+  const [img, setImg] = useState<string[]>([]);
   const navigate = useNavigate();
 
+  const onSubmit = (data: FormValues) => {
+    const user = {
+      name: data.name,
+      phone: data.phone,
+      image: img
+    }
+    updateVisitant(user, 1)
+      .then(resp => {
+        console.log(resp)
+        navigate(-1)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+    navigate(-1)
+  };
+
   const handleCapture = (imageData: string) => {
-    // Faça algo com a imagem capturada, como enviar para o servidor
-    console.log('Image captured:', imageData);
+    img.push(imageData)
+    setImg(img)
   };
 
   return (
     <>
       <Styled.Page>
-        <Styled.Content>
+        <Styled.Content onSubmit={handleSubmit(onSubmit)}>
           <Styled.Title>EDITAR USUÁRIO</Styled.Title>
           <div>
             <Styled.InputsDiv>

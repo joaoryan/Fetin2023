@@ -3,6 +3,7 @@ import Loading from '../../Loading';
 import Modal from '../Modal';
 import * as Styled from './styles';
 import { useNavigate } from 'react-router';
+import { deleteUserResident } from '../../../services/axios';
 
 type ModalProps = {
   id: number;
@@ -14,7 +15,14 @@ const ModalDeleteVisitant = (props: ModalProps) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = () => {
-
+    deleteUserResident(props.id)
+      .then(resp => {
+        console.log(resp)
+        navigate(-1)
+      })
+      .catch(error => {
+        console.log(error)
+      })
   };
 
   const content = (

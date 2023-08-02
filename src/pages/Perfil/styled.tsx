@@ -67,7 +67,7 @@ export const InfoDiv = styled.div`
   @media (max-width: 1100px) {
     width: 80%;
     height: 52%;
-    padding: 5px 20px;
+    padding: 20px;
     gap: 20px;
   }
 `

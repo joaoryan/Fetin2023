@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form';
 import * as Styled from './styled';
 import { useNavigate } from 'react-router';
 import RotateBanner from '../../components/RotateBanner';
+import { login } from '../../services/axios';
 
 type FormValues = {
   email: string;
@@ -13,7 +14,20 @@ export function LoginPage(): JSX.Element {
   const navigate = useNavigate();
 
   const onSubmit = (data: FormValues) => {
-    console.log(data); // Aqui você pode enviar os dados para a API de login
+    const user = {
+      email: data.email,
+      password: data.password,
+    }
+    login(user)
+      .then(resp => {
+        console.log(resp)
+        localStorage.setItem('user', JSON.stringify(resp.data.user));
+        localStorage.setItem('resident', JSON.stringify(resp.data.resident));
+        navigate('/home')
+      })
+      .catch(error => {
+        console.log(error)
+      })
     navigate('/home')
   };
 

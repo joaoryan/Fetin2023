@@ -4,23 +4,15 @@ import AnimateWhenVisible from '../../components/AnimateWhenVisible';
 import { MdGroupAdd } from 'react-icons/md';
 import { MdAccountCircle } from 'react-icons/md'
 import { RiContactsFill } from 'react-icons/ri'
-import { RiLogoutBoxRLine } from 'react-icons/ri'
 import TeamCard from '../../components/Equip';
 import Header from '../../components/Hader';
 import image1 from '../../assets/image/joao-ryan.png'
 import image2 from '../../assets/image/matheus.png'
 import image3 from '../../assets/image/joao.png'
 import image4 from '../../assets/image/gustavo.png'
-import CameraInput from '../../components/CameraInput';
-//RiContactsFill  
 
 export function Home(): JSX.Element {
   const navigate = useNavigate();
-
-  const handleCapture = (imageData: string) => {
-    // Faça algo com a imagem capturada, como enviar para o servidor
-    console.log('Image captured:', imageData);
-  };
 
   return (
     <><Styled.Container>
