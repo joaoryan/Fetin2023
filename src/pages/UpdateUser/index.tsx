@@ -38,6 +38,7 @@ export function UpdateUser(): JSX.Element {
       address: data.address,
       image: img
     }
+    console.log(user)
     updateUserResident(user, 1)
       .then(resp => {
         console.log(resp)
@@ -113,7 +114,7 @@ export function UpdateUser(): JSX.Element {
               <Styled.Button onClick={() => navigate(-1)} >
                 {'voltar'}
               </Styled.Button>
-              <Styled.Button >
+              <Styled.Button type="submit" >
                 {'salvar'}
               </Styled.Button>
             </Styled.ButtonDiv>

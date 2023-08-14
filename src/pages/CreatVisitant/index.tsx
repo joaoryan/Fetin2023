@@ -31,6 +31,9 @@ export function CreatVisitant(): JSX.Element {
     creatVisitantResident(user, 1)
       .then(resp => {
         console.log(resp)
+        for (var elemento of img) {
+          console.log(elemento);
+        }
         navigate('/home')
       })
       .catch(error => {

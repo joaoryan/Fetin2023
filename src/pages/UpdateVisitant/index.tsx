@@ -24,12 +24,16 @@ export function UpdateVisitant(): JSX.Element {
   const [img, setImg] = useState<string[]>([]);
   const navigate = useNavigate();
 
+  var userVisitant = JSON.parse(String(localStorage.getItem('visitant')));
+  console.log(userVisitant)
+
   const onSubmit = (data: FormValues) => {
     const user = {
       name: data.name,
       phone: data.phone,
       image: img
     }
+    console.log(user)
     updateVisitant(user, 1)
       .then(resp => {
         console.log(resp)
@@ -61,7 +65,7 @@ export function UpdateVisitant(): JSX.Element {
                   Nome:
                   <Styled.Input
                     type="text"
-                    defaultValue={user.name}
+                    defaultValue={userVisitant.name}
                     {...register('name', { required: true })}
                     disabled={formState.isSubmitting}
                   />
@@ -71,7 +75,7 @@ export function UpdateVisitant(): JSX.Element {
                   Telefone:
                   <Styled.Input
                     type="phone"
-                    defaultValue={user.phone}
+                    defaultValue={userVisitant.phone}
                     {...register('phone', { required: true })}
                     disabled={formState.isSubmitting}
                   />
@@ -85,7 +89,7 @@ export function UpdateVisitant(): JSX.Element {
               <Styled.Button onClick={() => navigate(-1)} >
                 {'voltar'}
               </Styled.Button>
-              <Styled.Button >
+              <Styled.Button type="submit" >
                 {'salvar'}
               </Styled.Button>
             </Styled.ButtonDiv>

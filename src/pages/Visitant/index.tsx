@@ -18,24 +18,27 @@ import ModalDeleteVisitant from '../../components/Modals/ModalDeleteVisitant';
 
 export function Visitant(): JSX.Element {
   const [showModalDeleteUser, setShowModalDeleteUser] = useState(false);
+  var userVisitant = JSON.parse(String(localStorage.getItem('visitant')));
+  console.log(userVisitant)
   const navigate = useNavigate();
   const visitant = [
-    { name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
-    { name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
-    { name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
-    { name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
-    { name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
-    { name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
-    { name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
-    { name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
+    { id: 1, name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
+    { id: 1, name: '2', img: image, phone: '(35) 9 99372979' },
+    { id: 1, name: '3', img: image, phone: '(35) 9 99372979' },
+    { id: 1, name: '4', img: image, phone: '(35) 9 99372979' },
+    { id: 1, name: '5', img: image, phone: '(35) 9 99372979' },
+    { id: 1, name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
+    { id: 1, name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
+    { id: 1, name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
   ]
+
 
   return (
     <>
 
       {showModalDeleteUser && (
         <ModalDeleteVisitant
-          id={1}
+          id={userVisitant.id}
           onCancel={() => setShowModalDeleteUser(false)}
         />
       )}

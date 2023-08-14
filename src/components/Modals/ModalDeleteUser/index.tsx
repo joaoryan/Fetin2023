@@ -40,7 +40,7 @@ const ModalDeleteUser = (props: ModalProps) => {
       <Styled.Button onClick={() => props.onCancel()} >
         {'voltar'}
       </Styled.Button>
-      <Styled.Button >
+      <Styled.Button onClick={() => handleSubmit} >
         {'deletar'}
       </Styled.Button>
     </>
