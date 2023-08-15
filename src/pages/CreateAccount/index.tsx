@@ -29,6 +29,8 @@ export function CreateAccount(): JSX.Element {
       codeAdm: data.codeAdm,
       image: img
     }
+    console.log(user)
+    /*
     signup(user)
       .then(resp => {
         console.log(resp)
@@ -37,6 +39,7 @@ export function CreateAccount(): JSX.Element {
       .catch(error => {
         console.log(error)
       })
+      */
   };
 
   const handleCapture = (imageData: string) => {

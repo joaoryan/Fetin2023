@@ -1,9 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios'
 
 export const config: AxiosRequestConfig = {
-  //baseURL: 'http://18.231.116.149:443/api/',
-  //baseURL: process.env.REACT_APP_API_URL,
-  baseURL: 'http://localhost:5050/api/',
+  baseURL: 'http://localhost:8080',
   responseType: 'json',
   headers: {
     accept: 'application/json',
@@ -48,10 +46,9 @@ export const loadUserResident = async (idResident: number) => {
   return axios.request<any>(config)
 }
 
-export const creatVisitantResident = async (user: any, idResident: number) => {
-  config.url = `/creat/visitant/resident/${idResident}`
+export const creatVisitantResident = async (user: any) => {
+  config.url = `/visitant`
   config.method = 'post'
-  config.params = idResident
   config.data = user
   return axios.request<any>(config);
 }

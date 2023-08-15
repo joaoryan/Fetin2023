@@ -21,14 +21,18 @@ export function CreatVisitant(): JSX.Element {
     img.push(imageData)
     setImg(img)
   };
-
+  console.log(img)
   const onSubmit = (data: FormValues) => {
+    console.log(data)
     const user = {
       name: data.name,
       phone: data.phone,
+      serialNumber: 123,
+      residentId: 1,
       image: img
     }
-    creatVisitantResident(user, 1)
+    console.log(user)
+    creatVisitantResident(user)
       .then(resp => {
         console.log(resp)
         navigate('/home')
@@ -42,7 +46,7 @@ export function CreatVisitant(): JSX.Element {
   return (
     <>
       <Styled.Page>
-        <Styled.Content onSubmit={handleSubmit(onSubmit)}>
+        <Styled.Form onSubmit={handleSubmit(onSubmit)}>
           <Styled.Title>CRIAR USUÁRIO</Styled.Title>
           <div>
             <Styled.InputsDiv>
@@ -77,12 +81,12 @@ export function CreatVisitant(): JSX.Element {
               <Styled.Button onClick={() => navigate(-1)} >
                 {'voltar'}
               </Styled.Button>
-              <Styled.Button type="submit" >
+              <Styled.Button type="submit">
                 {'salvar'}
               </Styled.Button>
             </Styled.ButtonDiv>
           </div>
-        </Styled.Content>
+        </Styled.Form>
       </Styled.Page>
     </>
   );
