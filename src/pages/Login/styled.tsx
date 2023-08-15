@@ -34,6 +34,8 @@ export const Title = styled.h1`
   margin: 0px 0px 16px 20px;
 `;
 
+Title.displayName = 'Title';
+
 export const Text1 = styled.div`
   font-size: 13px;
   cursor: pointer;

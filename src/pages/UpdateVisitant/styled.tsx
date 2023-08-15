@@ -25,7 +25,7 @@ export const Regress = styled.div`
   }
 `;
 
-export const Content = styled.div`
+export const Content = styled.form`
   //width: 80%;
   min-height: 100px;
   display: flex;

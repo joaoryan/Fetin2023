@@ -14,7 +14,7 @@ const CardVisitant = ({
     visitant,
     timeAnimate,
     threshold = 0.2,
-    modalDelete,
+    modalDelete
 }: CardProps) => {
     const navigate = useNavigate();
     const { ref, inView } = useInView({ threshold })
@@ -24,11 +24,11 @@ const CardVisitant = ({
             <Styled.Card time={timeAnimate}>
                 <div ref={ref} className={`transform ${inView ? "show" : ""}`}>
                     <Styled.Icon>
-                        <div onClick={() => modalDelete()}>
+                        <div onClick={() => (modalDelete(), localStorage.setItem('visitant', JSON.stringify(visitant)))}>
                             Remover
                             <MdDeleteForever />
                         </div>
-                        <div onClick={() => navigate('update')}>
+                        <div onClick={() => (navigate('update'), localStorage.setItem('visitant', JSON.stringify(visitant)))}>
                             Editar
                             <MdEdit />
                         </div>
