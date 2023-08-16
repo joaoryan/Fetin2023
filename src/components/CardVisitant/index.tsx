@@ -28,10 +28,12 @@ const CardVisitant = ({
                             Remover
                             <MdDeleteForever />
                         </div>
-                        <div onClick={() => (navigate('update'), localStorage.setItem('visitant', JSON.stringify(visitant)))}>
+                        {/*
+                         <div onClick={() => (navigate('update'), localStorage.setItem('visitant', JSON.stringify(visitant)))}>
                             Editar
                             <MdEdit />
                         </div>
+                        */}
                     </Styled.Icon>
                     <img src={visitant.img} />
                     <Styled.Text>{visitant.name}</Styled.Text>

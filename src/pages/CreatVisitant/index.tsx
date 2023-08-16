@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router';
 import Header from '../../components/Hader';
 import CameraInput from '../../components/CameraInput';
 import { FaArrowLeft } from 'react-icons/fa';
-import { creatVisitantResident } from '../../services/axios';
+import { creatImg, creatVisitantResident } from '../../services/axios';
 import { useState } from 'react';
 
 type FormValues = {
@@ -29,14 +29,18 @@ export function CreatVisitant(): JSX.Element {
       phone: data.phone,
       serialNumber: 123,
       residentId: 1,
-      image: img
+      image: img[0]
     }
-    console.log(user)
     creatVisitantResident(user)
       .then(resp => {
         console.log(resp)
-        for (var elemento of img) {
-          console.log(elemento);
+        for (var item of img) {
+          const user = {
+            userId: resp.data.id,
+            image: item,
+            serialNumber: 123
+          }
+          creatImg(user)
         }
         navigate('/home')
       })

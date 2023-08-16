@@ -77,7 +77,6 @@ export function Home(): JSX.Element {
       </Styled.TeamDiv>
     </Styled.Container>
       <Styled.Baseboard>
-        Logo
       </Styled.Baseboard>
     </>
   );

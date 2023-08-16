@@ -80,6 +80,7 @@ export function Profile(): JSX.Element {
                 <Styled.Text>{user.phone}</Styled.Text>
               </div>
             </Styled.Info>
+            {/*
             <Styled.DivButton>
               <Styled.Button onClick={() => setShowModalDeleteUser(true)}>
                 deletar
@@ -88,7 +89,7 @@ export function Profile(): JSX.Element {
                 editar
               </Styled.Button>
             </Styled.DivButton>
-
+            */}
           </Styled.InfoDiv>
         </Styled.BodyDiv>
       </Styled.Container>

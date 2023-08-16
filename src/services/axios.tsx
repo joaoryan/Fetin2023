@@ -53,10 +53,9 @@ export const creatVisitantResident = async (user: any) => {
   return axios.request<any>(config);
 }
 
-export const creatImg = async (user: any, idResident: number) => {
-  config.url = `/creat/visitant/resident/${idResident}`
+export const creatImg = async (user: any) => {
+  config.url = `/img`
   config.method = 'post'
-  config.params = idResident
   config.data = user
   return axios.request<any>(config);
 }
@@ -78,7 +77,7 @@ export const updateVisitant = async (user: any, idUser: number) => {
 }
 
 export const deleteUserResident = async (idUser: number) => {
-  config.url = `/delete/user/${idUser}`
+  config.url = `/user/${idUser}`
   config.method = 'delete'
   config.params = idUser
   return axios.request<any>(config);
