@@ -7,6 +7,7 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
+  padding: 5ch 0px;
 `;
 
 export const DivInputs = styled.div`
@@ -35,6 +36,10 @@ export const divButton = styled.div`
 export const Title = styled.h1`
   font-size: 22px;
   margin: 0px 0px 16px 20px;
+  @media (max-width: 700px) {
+    font-size: 18px;
+    margin: 0px;
+  }
 `;
 export const Image = styled.div`
   svg{
@@ -61,6 +66,9 @@ export const Form = styled.form`
   align-items: center;
   padding: 16px;
   gap: 10px;
+  @media (max-width: 700px) {
+    gap: 5px;
+  }
 `;
 
 export const Label = styled.label`
@@ -72,6 +80,9 @@ export const Label = styled.label`
   gap:5px;
   border: hidden;
   transition: 0.5s;
+  @media (max-width: 700px) {
+    font-size: 12px;
+  }
   &:hover {
     transition: 0.5s;
     color: #F231A5

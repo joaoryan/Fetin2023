@@ -18,7 +18,7 @@ const AnimateWhenVisible = ({
     return (
         <Styled.Container>
             <div ref={ref} className={`transform ${inView ? "show" : ""}`}>
-                <GiComputing />
+                {/* <GiComputing />*/}
                 <Styled.Text>
                     {text}
                 </Styled.Text>

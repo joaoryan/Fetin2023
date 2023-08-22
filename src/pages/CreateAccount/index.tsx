@@ -63,7 +63,7 @@ export function CreateAccount(): JSX.Element {
               {...register('name', { required: true })}
               disabled={formState.isSubmitting}
             />
-            {formState.errors.name && <Styled.Error>Nome é obrigatório</Styled.Error>}
+            {/* {formState.errors.name && <Styled.Error>Nome é obrigatório</Styled.Error>} */}
           </Styled.Label>
 
           <Styled.Label>
@@ -73,7 +73,7 @@ export function CreateAccount(): JSX.Element {
               {...register('email', { required: true })}
               disabled={formState.isSubmitting}
             />
-            {formState.errors.email && <Styled.Error>Email é obrigatório</Styled.Error>}
+            {/* {formState.errors.email && <Styled.Error>Email é obrigatório</Styled.Error>}*/}
           </Styled.Label>
 
           <Styled.Label>
@@ -84,9 +84,9 @@ export function CreateAccount(): JSX.Element {
               {...register('password', { required: true })}
               disabled={formState.isSubmitting}
             />
-            {formState.errors.password && <Styled.Error>Senha é obrigatória</Styled.Error>}
+            {/* {formState.errors.password && <Styled.Error>Senha é obrigatória</Styled.Error>}*/}
           </Styled.Label>
-
+          {/*
           <Styled.Label>
             Telefone:
             <Styled.Input
@@ -94,9 +94,9 @@ export function CreateAccount(): JSX.Element {
               {...register('phone', { required: true })}
               disabled={formState.isSubmitting}
             />
-            {formState.errors.email && <Styled.Error>Email é obrigatório</Styled.Error>}
+             {formState.errors.email && <Styled.Error>Email é obrigatório</Styled.Error>} 
           </Styled.Label>
-
+          */}
           <Styled.Label>
             Codigo administrador:
             <Styled.Input
@@ -105,7 +105,7 @@ export function CreateAccount(): JSX.Element {
               {...register('codeAdm', { required: true })}
               disabled={formState.isSubmitting}
             />
-            {formState.errors.codeAdm && <Styled.Error>Codigo do administrador é obrigatória</Styled.Error>}
+            {/*{formState.errors.codeAdm && <Styled.Error>Codigo do administrador é obrigatória</Styled.Error>} */}
           </Styled.Label>
           <Styled.divButton>
             <Styled.Button onClick={() => navigate(`/`)} disabled={formState.isSubmitting}>

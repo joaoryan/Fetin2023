@@ -71,15 +71,6 @@ export function CreatVisitant(): JSX.Element {
                   />
                   {formState.errors.name && <Styled.Error>Nome é obrigatório</Styled.Error>}
                 </Styled.Label>
-                <Styled.Label>
-                  Telefone:
-                  <Styled.Input
-                    type="phone"
-                    {...register('phone', { required: true })}
-                    disabled={formState.isSubmitting}
-                  />
-                  {formState.errors.phone && <Styled.Error>Telefone é obrigatório</Styled.Error>}
-                </Styled.Label>
               </Styled.InfoDiv>
             </Styled.InputsDiv>
           </div>

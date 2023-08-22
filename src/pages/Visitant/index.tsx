@@ -23,13 +23,6 @@ export function Visitant(): JSX.Element {
   const navigate = useNavigate();
   const visitant = [
     { id: 1, name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
-    { id: 1, name: '2', img: image, phone: '(35) 9 99372979' },
-    { id: 1, name: '3', img: image, phone: '(35) 9 99372979' },
-    { id: 1, name: '4', img: image, phone: '(35) 9 99372979' },
-    { id: 1, name: '5', img: image, phone: '(35) 9 99372979' },
-    { id: 1, name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
-    { id: 1, name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
-    { id: 1, name: 'joao ryan', img: image, phone: '(35) 9 99372979' },
   ]
 
 

@@ -47,8 +47,8 @@ export const Image = styled.div`
       height: 300px;
     }
     @media (max-width: 400px) {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
     }
   }
 `
@@ -70,10 +70,17 @@ export const InfoDiv = styled.div`
     padding: 20px;
     gap: 20px;
   }
+  @media (max-width: 400px) {
+    gap: 10px;
+    padding: 10px;
+  }
 `
 
 export const Title = styled.div`
   font-size: 25px;
+  @media (max-width: 400px) {
+    font-size: 20px;
+  }
 
 `
 export const Info = styled.div`
@@ -82,14 +89,21 @@ export const Info = styled.div`
   align-content: flex-start;
   width: 100%;
   gap: 40px;
+  @media (max-width: 400px) {
+    gap: 10px;
+  }
 `
 export const Subtitle = styled.div`
   font-size: 20px;
-
+  @media (max-width: 400px) {
+    font-size: 16px;
+  }
 `
 export const Text = styled.div`
   font-size: 20px;
-
+  @media (max-width: 400px) {
+    font-size: 16px;
+  }
 `
 
 export const DivButton = styled.div`

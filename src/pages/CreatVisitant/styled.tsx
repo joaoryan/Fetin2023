@@ -40,9 +40,10 @@ export const Form = styled.form`
   @media (max-width: 700px) {
     width: auto;
     padding: 30px;
+    gap: 10px;
   }
   @media (max-width: 500px) {
-    padding: 30px 10px;
+    padding: 20px 10px;
   }
 `;
 
@@ -184,6 +185,9 @@ export const Input = styled.input`
 
 export const Title = styled.div`
   font-size: 25px;
+  @media (max-width: 700px) {
+    font-size: 20px;
+  }
 
 `
 export const Info = styled.div`
