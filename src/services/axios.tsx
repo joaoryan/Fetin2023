@@ -32,6 +32,13 @@ export const login = async (user: any) => {
   return axios.request<any>(config);
 };
 
+export const creat = async (userName: any) => {
+  config.url = 'creat'
+  config.method = 'post'
+  config.data = { nomeUser: userName }
+  return axios.request<any>(config);
+};
+
 export const signup = async (user: any) => {
   config.url = 'signup'
   config.method = 'post'

@@ -16,6 +16,8 @@
     "cors": "^2.8.5",
     "dexie": "^3.2.1",
     "dexie-react-hooks": "^1.1.1",
+    "face-api.js": "^0.22.2",
+    "file-saver": "^2.0.5",
     "flat": "^5.0.2",
     "jquery": "^3.6.0",
     "jss-plugin-rule-value-function": "^10.9.0",
@@ -77,6 +79,7 @@
     ]
   },
   "devDependencies": {
+    "@types/file-saver": "^2.0.5",
     "@types/jquery": "^3.5.14",
     "@types/react-input-mask": "^3.0.1",
     "@types/react-redux": "^7.1.16",

@@ -4,13 +4,18 @@ import { useNavigate } from 'react-router';
 import Header from '../../components/Hader';
 import CameraInput from '../../components/CameraInput';
 import { FaArrowLeft } from 'react-icons/fa';
-import { creatImg, creatVisitantResident } from '../../services/axios';
+import { creat, creatImg, creatVisitantResident } from '../../services/axios';
 import { useState } from 'react';
+import React from 'react';
+import axios from 'axios';
+import { saveAs } from 'file-saver';
 
 type FormValues = {
   name: string;
   phone: number;
 };
+
+
 
 export function CreatVisitant(): JSX.Element {
   const { register, handleSubmit, formState } = useForm<FormValues>();
@@ -21,8 +26,27 @@ export function CreatVisitant(): JSX.Element {
     img.push(imageData)
     setImg(img)
   };
-  console.log(img)
-  const onSubmit = (data: FormValues) => {
+
+  const onSubmit = async (data: FormValues) => {
+    for (let index = 0; index < 10; index++) {
+      const imageUrl = img[index];
+      const downloadLink = document.createElement('a');
+      downloadLink.href = imageUrl;
+      downloadLink.download = `captured_image.png`;
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+    }
+    setTimeout(() => {
+      creat(data.name)
+        .then(resp => {
+
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    }, 1000);
+
+    /*
     console.log(data)
     const user = {
       name: data.name,
@@ -48,6 +72,7 @@ export function CreatVisitant(): JSX.Element {
         console.log(error)
       })
     navigate('/home')
+    */
   };
 
   return (

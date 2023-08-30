@@ -35,6 +35,7 @@ export function Home(): JSX.Element {
               </Styled.Title>
             </Styled.CardButton>
           </Styled.CardButtonDiv>
+          {/*
           <Styled.CardButtonDiv onClick={() => navigate(`/visitant`)}>
             <Styled.CardButton>
               <RiContactsFill />
@@ -43,6 +44,7 @@ export function Home(): JSX.Element {
               </Styled.Title>
             </Styled.CardButton>
           </Styled.CardButtonDiv>
+          */}
         </Styled.CardDiv>
       </Styled.backgroundGif>
       <Styled.infoDiv>
