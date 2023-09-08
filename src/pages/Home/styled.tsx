@@ -43,6 +43,10 @@ export const CardDiv = styled.div`
   flex-direction: row;
   justify-content: space-around;
   margin-top: 100px;
+  a{
+    text-decoration: none;
+  }
+
   @media (max-width: 540px) {
     flex-direction: column;
     align-items: center;
@@ -175,10 +179,10 @@ export const divButton = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 34px;
+  font-size: 30px;
   cursor: default;
   @media (max-width: 1040px) {
-    font-size: 24px;
+    font-size: 20px;
   } 
   @media (max-width: 740px) {
     font-size: 18px;

@@ -32,6 +32,12 @@ export const login = async (user: any) => {
   return axios.request<any>(config);
 };
 
+export const load = async () => {
+  config.url = 'visitant'
+  config.method = 'get'
+  return axios.request<any>(config);
+};
+
 export const creat = async (userName: any) => {
   config.url = 'creat'
   config.method = 'post'
@@ -87,5 +93,12 @@ export const deleteUserResident = async (idUser: number) => {
   config.url = `/user/${idUser}`
   config.method = 'delete'
   config.params = idUser
+  return axios.request<any>(config);
+}
+
+export const deleteUser = async (name: string) => {
+  config.url = `/visitant/${name}`
+  config.method = 'delete'
+  config.params = name
   return axios.request<any>(config);
 }

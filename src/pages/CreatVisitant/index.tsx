@@ -28,7 +28,7 @@ export function CreatVisitant(): JSX.Element {
   };
 
   const onSubmit = async (data: FormValues) => {
-    for (let index = 0; index < 10; index++) {
+    for (let index = 0; index < 5; index++) {
       const imageUrl = img[index];
       const downloadLink = document.createElement('a');
       downloadLink.href = imageUrl;
@@ -36,14 +36,15 @@ export function CreatVisitant(): JSX.Element {
       document.body.appendChild(downloadLink);
       downloadLink.click();
     }
+
     setTimeout(() => {
       creat(data.name)
         .then(resp => {
-
         })
         .catch(error => {
           console.log(error)
         })
+      navigate('/home')
     }, 1000);
 
     /*
@@ -71,7 +72,7 @@ export function CreatVisitant(): JSX.Element {
       .catch(error => {
         console.log(error)
       })
-    navigate('/home')
+    
     */
   };
 
@@ -101,7 +102,7 @@ export function CreatVisitant(): JSX.Element {
           </div>
           <div>
             <Styled.ButtonDiv>
-              <Styled.Button onClick={() => navigate(-1)} >
+              <Styled.Button onClick={() => (setImg([]), navigate(-1))} >
                 {'voltar'}
               </Styled.Button>
               <Styled.Button type="submit">

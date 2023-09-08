@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     svg{
-        font-size: 80px
+        font-size: 80px;
     }
     .transform {
         display: flex;

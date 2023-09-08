@@ -10,23 +10,36 @@ import image1 from '../../assets/image/joao-ryan.png'
 import image2 from '../../assets/image/matheus.png'
 import image3 from '../../assets/image/joao.png'
 import image4 from '../../assets/image/gustavo.png'
+import { load } from '../../services/axios';
 
 export function Home(): JSX.Element {
   const navigate = useNavigate();
+
+  load()
+    .then(resp => {
+      console.log(resp)
+    })
+    .catch(error => {
+      console.log(error)
+    })
 
   return (
     <><Styled.Container>
       <Styled.backgroundGif>
         <Header />
         <Styled.CardDiv>
-          <Styled.CardButtonDiv onClick={() => navigate(`/profile`)}>
-            <Styled.CardButton>
-              <MdAccountCircle />
-              <Styled.Title>
-                Perfil
-              </Styled.Title>
-            </Styled.CardButton>
-          </Styled.CardButtonDiv>
+          <a href="http://127.0.0.1:5500/faceApi/index.html" target="_blank">
+            <Styled.CardButtonDiv>
+              <Styled.CardButton>
+                <MdAccountCircle />
+                <Styled.Title>
+                  Identificação
+                </Styled.Title>
+              </Styled.CardButton>
+            </Styled.CardButtonDiv>
+          </a>
+
+
           <Styled.CardButtonDiv onClick={() => navigate(`/user/:id/visitant/creat`)}>
             <Styled.CardButton>
               <MdGroupAdd />
@@ -35,7 +48,6 @@ export function Home(): JSX.Element {
               </Styled.Title>
             </Styled.CardButton>
           </Styled.CardButtonDiv>
-          {/*
           <Styled.CardButtonDiv onClick={() => navigate(`/visitant`)}>
             <Styled.CardButton>
               <RiContactsFill />
@@ -44,27 +56,21 @@ export function Home(): JSX.Element {
               </Styled.Title>
             </Styled.CardButton>
           </Styled.CardButtonDiv>
-          */}
         </Styled.CardDiv>
       </Styled.backgroundGif>
       <Styled.infoDiv>
         <Styled.Title>Conheça a SafeFace</Styled.Title>
-        <Styled.Text1>Um sistema de reconhecimento facial pode oferecer uma maneira conveniente de desbloquear portas ou acessar áreas restritas sem a necessidade
-          de chaves ou senhas. Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar
-          áreas restritas.pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas
+        <Styled.Text1>O projeto propõe o desenvolvimento de um sistema de controle de acesso facial inteligente que utiliza tecnologias avançadas de reconhecimento facial para aumentar a segurança e a conveniência em ambientes residenciais, comerciais e até mesmo em eventos. O sistema visa substituir métodos tradicionais de autenticação, como cartões de identificação e senhas, proporcionando uma solução mais rápida, precisa e eficaz para controlar o acesso às instalações.
         </Styled.Text1>
         <Styled.info2Div>
-          <AnimateWhenVisible icon={'FaSearch'} text={`Um sistema de reconhecimento facial pode oferecer uma maneira conveniente de desbloquear portas ou acessar áreas restritas sem
-            a necessidadede chaves ou senhas Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas.`} />
 
           <AnimateWhenVisible icon={'FaSearch'} text={`Um sistema de reconhecimento facial pode oferecer uma maneira conveniente de desbloquear portas ou acessar áreas restritas sem
             a necessidadede chaves ou senhas Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas.`} />
 
-          <AnimateWhenVisible icon={'FaSearch'} text={`Um sistema de reconhecimento facial pode oferecer uma maneira conveniente de desbloquear portas ou acessar áreas restritas sem
-            a necessidadede chaves ou senhas Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas.`} />
+          <AnimateWhenVisible icon={'FaSearch'} text={`O sistema de controle de acesso proposto tem o potencial de revolucionar a segurança e autenticação em condomínios, empresas e eventos.`} />
 
-          <AnimateWhenVisible icon={'FaSearch'} text={`Um sistema de reconhecimento facial pode oferecer uma maneira conveniente de desbloquear portas ou acessar áreas restritas sem
-            a necessidadede chaves ou senhas Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas.`} />
+          <AnimateWhenVisible icon={'FaSearch'} text={`Utilizar o reconhecimento facial avançado, busca-se melhorar a eficiência e precisão do controle de acesso, proporcionando maior modernização e eficácia na segurança desses locais.`} />
+
         </Styled.info2Div>
       </Styled.infoDiv>
       <Styled.TeamDiv>

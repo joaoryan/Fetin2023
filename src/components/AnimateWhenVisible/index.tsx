@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import * as Styled from './styled';
-import { GiComputing } from 'react-icons/gi';
+import { RiBodyScanFill } from 'react-icons/ri';
 
 interface AnimateWhenVisibleProps {
     icon: String;
@@ -18,7 +18,7 @@ const AnimateWhenVisible = ({
     return (
         <Styled.Container>
             <div ref={ref} className={`transform ${inView ? "show" : ""}`}>
-                {/* <GiComputing />*/}
+                <RiBodyScanFill />
                 <Styled.Text>
                     {text}
                 </Styled.Text>
