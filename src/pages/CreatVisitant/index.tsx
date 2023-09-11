@@ -6,9 +6,7 @@ import CameraInput from '../../components/CameraInput';
 import { FaArrowLeft } from 'react-icons/fa';
 import { creat, creatImg, creatVisitantResident } from '../../services/axios';
 import { useState } from 'react';
-import React from 'react';
-import axios from 'axios';
-import { saveAs } from 'file-saver';
+
 
 type FormValues = {
   name: string;
@@ -28,7 +26,8 @@ export function CreatVisitant(): JSX.Element {
   };
 
   const onSubmit = async (data: FormValues) => {
-    for (let index = 0; index < 5; index++) {
+
+    for (let index = 0; index < img.length; index++) {
       const imageUrl = img[index];
       const downloadLink = document.createElement('a');
       downloadLink.href = imageUrl;

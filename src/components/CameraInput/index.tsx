@@ -20,12 +20,12 @@ const CameraInput: React.FC<CameraInputProps> = ({ onCapture }) => {
 
     const capturePhoto = async () => {
         setDisableInput(true)
-        for (let i = 1; i <= 5; i++) {
+        for (let i = 1; i <= 10; i++) {
             const imageData = webcamRef.current?.getScreenshot();
             if (imageData) {
                 onCapture(imageData)
                 setNumPhotosTaken(i)
-                await delay(2000)
+                await delay(900)
             }
         }
 
@@ -39,7 +39,7 @@ const CameraInput: React.FC<CameraInputProps> = ({ onCapture }) => {
                 width: '300px',
             }} />
             <Styled.Button onClick={() => capturePhoto()} disabled={disableInput}>
-                Capture Photo ({numPhotosTaken}/5)
+                Capture Photo ({numPhotosTaken}/10)
             </Styled.Button>
         </Styled.Webcam>
     );
