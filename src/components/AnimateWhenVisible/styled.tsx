@@ -31,6 +31,7 @@ export const Container = styled.div`
 export const Text = styled.div`
     width: 100%;
     height: 100%;
+    text-align: justify;
     display: flex;
     align-items: center;
     justify-content: center;

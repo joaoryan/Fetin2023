@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   width: 100vw;
-  padding: 0px 0px 30px 0px;
+  padding: 0px 0px 00px 0px;
 `;
 
 export const LogoutButton = styled.div`
@@ -41,7 +41,7 @@ export const Baseboard = styled.div`
 export const CardDiv = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-top: 100px;
   a{
     text-decoration: none;
@@ -129,8 +129,11 @@ export const infoDiv = styled.div`
 export const TeamDiv = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: #1b2b38;
   gap: 0px;
-  margin: 100px 160px 0px 160px;
+  height: 100%;
+  margin-top: 100px;
+  padding: 100px 160px 10px 160px;
    @media (max-width: 1000px) {
     margin: 140px 40px 0px 40px;
   }
@@ -150,6 +153,13 @@ export const TeamCardDiv = styled.div`
     justify-content: space-around;
     gap: 20px;
   }
+`;
+
+export const Footer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
 `;
 
 export const info2Div = styled.div`
@@ -192,6 +202,7 @@ export const Title = styled.h1`
 export const Text1 = styled.div`
   font-size: 20px;
   cursor: default;
+  text-align: justify;
   @media (max-width: 740px) {
     font-size: 16px;
   } 

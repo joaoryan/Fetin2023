@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  //background-color: #202446;
   width: 100vw;
   height: 100vh;
   padding: 0px 0px 0px 0px;
@@ -30,14 +31,13 @@ export const Regress = styled.div`
 `;
 
 export const BodyDiv = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
   justify-content: space-evenly;
-  -webkit-box-align: center;
-  align-items: flex-start;
+ 
   padding: 40px;
-  gap: 20px;
-  flex-wrap: wrap
+  gap: 40px;
+//  height: 100%
 `;
 
 export const Image = styled.div`

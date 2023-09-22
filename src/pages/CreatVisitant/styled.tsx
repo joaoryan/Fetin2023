@@ -51,7 +51,7 @@ export const InputsDiv = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
   @media (max-width: 1150px) {
     flex-direction: column;

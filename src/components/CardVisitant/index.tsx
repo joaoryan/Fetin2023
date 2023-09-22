@@ -39,15 +39,15 @@ const CardVisitant = ({
 
             <Styled.Card time={timeAnimate}>
                 <div ref={ref} className={`transform ${inView ? "show" : ""}`}>
-                    <Styled.Icon>
-                        <div onClick={() => (deleteVisitant(), modalDelete())}>
-                            Remover
-                            <MdDeleteForever />
-                        </div>
-                    </Styled.Icon>
-
                     <img src={imageSrc} alt="Imagem" />
-                    <Styled.Text>{visitant.name}</Styled.Text>
+                    <Styled.DivName>
+                        <Styled.Text>{visitant.name}</Styled.Text>
+                        <Styled.Icon>
+                            <div onClick={() => (deleteVisitant(), modalDelete())}>
+                                <MdDeleteForever />
+                            </div>
+                        </Styled.Icon>
+                    </Styled.DivName>
                 </div>
             </Styled.Card>
         </>

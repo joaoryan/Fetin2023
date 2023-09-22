@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import * as Styled from './styled';
-import { RiBodyScanFill } from 'react-icons/ri';
+import iconFace from '../../assets/image/face-scanner.png';
 
 interface AnimateWhenVisibleProps {
-    icon: String;
+    icon: any;
     text: string;
     threshold?: number;
 }
@@ -18,7 +18,7 @@ const AnimateWhenVisible = ({
     return (
         <Styled.Container>
             <div ref={ref} className={`transform ${inView ? "show" : ""}`}>
-                <RiBodyScanFill />
+                <img src={icon} />
                 <Styled.Text>
                     {text}
                 </Styled.Text>

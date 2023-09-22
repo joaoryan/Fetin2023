@@ -11,6 +11,9 @@ import image2 from '../../assets/image/matheus.png'
 import image3 from '../../assets/image/joao.png'
 import image4 from '../../assets/image/gustavo.png'
 import { load } from '../../services/axios';
+import iconFace1 from '../../assets/image/face-id2.png';
+import iconFace2 from '../../assets/image/face-scanner.png';
+import iconFace3 from '../../assets/image/face-id1.png';
 
 export function Home(): JSX.Element {
   const navigate = useNavigate();
@@ -38,21 +41,19 @@ export function Home(): JSX.Element {
               </Styled.CardButton>
             </Styled.CardButtonDiv>
           </a>
-
-
-          <Styled.CardButtonDiv onClick={() => navigate(`/user/:id/visitant/creat`)}>
-            <Styled.CardButton>
-              <MdGroupAdd />
-              <Styled.Title>
-                Adicionar visitante
-              </Styled.Title>
-            </Styled.CardButton>
-          </Styled.CardButtonDiv>
           <Styled.CardButtonDiv onClick={() => navigate(`/visitant`)}>
             <Styled.CardButton>
               <RiContactsFill />
               <Styled.Title>
                 Visitantes
+              </Styled.Title>
+            </Styled.CardButton>
+          </Styled.CardButtonDiv>
+          <Styled.CardButtonDiv onClick={() => navigate(`/user/:id/visitant/creat`)}>
+            <Styled.CardButton>
+              <MdGroupAdd />
+              <Styled.Title>
+                Adicionar visitante
               </Styled.Title>
             </Styled.CardButton>
           </Styled.CardButtonDiv>
@@ -64,12 +65,12 @@ export function Home(): JSX.Element {
         </Styled.Text1>
         <Styled.info2Div>
 
-          <AnimateWhenVisible icon={'FaSearch'} text={`Um sistema de reconhecimento facial pode oferecer uma maneira conveniente de desbloquear portas ou acessar áreas restritas sem
+          <AnimateWhenVisible icon={iconFace1} text={`Um sistema de reconhecimento facial pode oferecer uma maneira conveniente de desbloquear portas ou acessar áreas restritas sem
             a necessidadede chaves ou senhas Isso pode ser particularmente útil em eventos ou reuniões, onde muitas pessoas precisam acessar áreas restritas.`} />
 
-          <AnimateWhenVisible icon={'FaSearch'} text={`O sistema de controle de acesso proposto tem o potencial de revolucionar a segurança e autenticação em condomínios, empresas e eventos.`} />
+          <AnimateWhenVisible icon={iconFace2} text={`O sistema de controle de acesso proposto tem o potencial de revolucionar a segurança e autenticação em condomínios, empresas e eventos.`} />
 
-          <AnimateWhenVisible icon={'FaSearch'} text={`Utilizar o reconhecimento facial avançado, busca-se melhorar a eficiência e precisão do controle de acesso, proporcionando maior modernização e eficácia na segurança desses locais.`} />
+          <AnimateWhenVisible icon={iconFace3} text={`Utilizar o reconhecimento facial avançado, busca-se melhorar a eficiência e precisão do controle de acesso, proporcionando maior modernização e eficácia na segurança desses locais.`} />
 
         </Styled.info2Div>
       </Styled.infoDiv>
@@ -82,10 +83,12 @@ export function Home(): JSX.Element {
           <TeamCard img={image3} name={'João Victor'} work={'develop'} timeAnimate={2} />
           <TeamCard img={image4} name={'Gustavo'} work={'develop'} timeAnimate={2.5} />
         </Styled.TeamCardDiv>
+        <Styled.Footer>
+          <p>&copy; 2023 Controle de Acesso Ltda - FETIN</p>
+        </Styled.Footer>
       </Styled.TeamDiv>
     </Styled.Container>
-      <Styled.Baseboard>
-      </Styled.Baseboard>
+
     </>
   );
 };
