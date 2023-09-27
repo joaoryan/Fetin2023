@@ -139,6 +139,7 @@ export const TeamDiv = styled.div`
   }
   @media (max-width: 600px) {
     margin: 140px 20px 0px 20px;
+    padding: 50px 10px 10px 10px;
   }
 `;
 
@@ -160,6 +161,10 @@ export const Footer = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 100px;
+    @media (max-width: 750px) {
+      font-size: 12px;
+      margin-top: 50px;
+    }
 `;
 
 export const info2Div = styled.div`

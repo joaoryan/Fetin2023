@@ -19,6 +19,23 @@ export const RegressDiv = styled.div`
   }
 `;
 
+export const DivIcon = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    .img{
+        width: 450px;
+    }
+    @media (max-width: 600px) {
+      .img{
+        width: 200px;
+    }
+    font-size: 14px;
+  }
+`;
+
 export const Regress = styled.div`
   gap: 10px;
   width: auto;
@@ -81,7 +98,9 @@ export const Subtitle = styled.div`
 `
 export const Text = styled.div`
   font-size: 20px;
-
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
 `
 
 export const DivButton = styled.div`

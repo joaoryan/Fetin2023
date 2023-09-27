@@ -13,6 +13,10 @@ export const Card = styled.div<Props>`
             width: 90%;
             height: 100%;
         }
+        @media (max-width: 750px) {
+            width: 80px;
+            height: 100%;
+        }
        
     }
     .transform {

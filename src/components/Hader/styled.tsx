@@ -31,6 +31,12 @@ export const DivLogo = styled.div`
   }
 `;
 
+export const DivAction = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+`;
 
 export const Hader = styled.div`
   display: flex;

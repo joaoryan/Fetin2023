@@ -11,7 +11,7 @@ import { RiContactsFill } from 'react-icons/ri'
 import { FaArrowLeft } from 'react-icons/fa'
 import TeamCard from '../../components/Equip';
 import Header from '../../components/Hader';
-import image from '../../assets/image/joao-ryan.png';
+import image from '../../assets/image/noItem.png';
 import CardVisitant from '../../components/CardVisitant';
 import ModalDeleteVisitant from '../../components/Modals/ModalDeleteVisitant';
 import { load } from '../../services/axios';
@@ -31,6 +31,7 @@ export function Visitant(): JSX.Element {
                 setVisitant(resp.data)
             })
             .catch(error => {
+                seLoading(false)
                 console.log(error)
             })
     }, [])
@@ -55,13 +56,25 @@ export function Visitant(): JSX.Element {
                             voltar
                         </Styled.Regress>
                     </Styled.RegressDiv>
+                    {visitant.length === 0 ?
+                        (
+                            <>
+                                <Styled.DivIcon>
+                                    <img src={image} alt='NotItens' className='img' />
+                                    <Styled.Text>{'Nenhum visitante cadastrado :('}</Styled.Text>
+                                </Styled.DivIcon>
+                            </>
+                        ) :
+                        (
+                            <Styled.BodyDiv>
+                                {visitant.map((item, index) =>
+                                    <CardVisitant visitant={item} timeAnimate={index / 4} deleteVisitant={() => setDeleteUser(item.name)} modalDelete={() => setShowModalDeleteUser(true)} />
+                                )}
+                            </Styled.BodyDiv>
+                        )
+                    }
 
-                    <Styled.BodyDiv>
-                        {visitant.map((item, index) =>
-                            <CardVisitant visitant={item} timeAnimate={index / 4} deleteVisitant={() => setDeleteUser(item.name)} modalDelete={() => setShowModalDeleteUser(true)} />
-                        )}
-                    </Styled.BodyDiv>
-                </Styled.Container>
+                </Styled.Container >
             }
         </>
     );
