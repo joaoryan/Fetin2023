@@ -40,10 +40,10 @@ const Header = () => {
             </Styled.DivLogo>
 
             <Styled.DivAction>
-                <Styled.LogoutButton onClick={handleClick}>
+                <Styled.LogoutButtonInstall onClick={handleClick}>
                     Instalar
                     <BiSolidDownload />
-                </Styled.LogoutButton>
+                </Styled.LogoutButtonInstall>
 
                 <Styled.LogoutButton onClick={() => navigate(`/`)}>
                     Sair

@@ -21,6 +21,22 @@ export const LogoutButton = styled.div`
   }
 `;
 
+export const LogoutButtonInstall = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+
+    @media (max-width: 900px) {
+         display: none;
+        }
+  svg{
+    font-size: 18px; 
+  }
+  :hover{
+    color: ${props => props.theme.colors.hoverColor};
+  }
+`;
 
 export const DivLogo = styled.div`
   display: flex;
